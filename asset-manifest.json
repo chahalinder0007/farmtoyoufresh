@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/farmtoyoufresh/static/css/main.073c9b0a.css",
+    "main.js": "/farmtoyoufresh/static/js/main.50a0d55f.js",
+    "static/js/787.2a661a60.chunk.js": "/farmtoyoufresh/static/js/787.2a661a60.chunk.js",
+    "static/media/logo.svg": "/farmtoyoufresh/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/farmtoyoufresh/index.html",
+    "main.073c9b0a.css.map": "/farmtoyoufresh/static/css/main.073c9b0a.css.map",
+    "main.50a0d55f.js.map": "/farmtoyoufresh/static/js/main.50a0d55f.js.map",
+    "787.2a661a60.chunk.js.map": "/farmtoyoufresh/static/js/787.2a661a60.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.50a0d55f.js"
+  ]
+}

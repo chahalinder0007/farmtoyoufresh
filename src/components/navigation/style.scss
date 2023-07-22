@@ -7,28 +7,24 @@
     font-weight: bold;
   }
 }
-:where(.css-dev-only-do-not-override-1sn0ohr).ant-menu-light.ant-menu-horizontal
-  > .ant-menu-item-selected,
-:where(.css-dev-only-do-not-override-1sn0ohr).ant-menu-light
-  > .ant-menu.ant-menu-horizontal
-  > .ant-menu-item-selected,
-:where(.css-dev-only-do-not-override-1sn0ohr).ant-menu-light.ant-menu-horizontal
-  > .ant-menu-submenu-selected,
-:where(.css-dev-only-do-not-override-1sn0ohr).ant-menu-light
-  > .ant-menu.ant-menu-horizontal
-  > .ant-menu-submenu-selected {
-  color: $green-color;
+.ant-menu.ant-menu-horizontal {
+  .ant-menu-item-selected {
+    color: $green-color;
+  }
 }
 
-:where(.css-dev-only-do-not-override-1sn0ohr).ant-menu-light.ant-menu-horizontal
-  > .ant-menu-item-selected::after,
-:where(.css-dev-only-do-not-override-1sn0ohr).ant-menu-light
-  > .ant-menu.ant-menu-horizontal
-  > .ant-menu-item-selected::after,
-:where(.css-dev-only-do-not-override-1sn0ohr).ant-menu-light.ant-menu-horizontal
-  > .ant-menu-submenu-selected::after,
-:where(.css-dev-only-do-not-override-1sn0ohr).ant-menu-light
-  > .ant-menu.ant-menu-horizontal
-  > .ant-menu-submenu-selected::after {
-  border-bottom-color: $green-color;
+.ant-menu.ant-menu-horizontal {
+  .ant-menu-item {
+    &:hover:not(.ant-menu-item-selected) {
+      color: $green-color;
+      &::after {
+        border-bottom-color: $green-color;
+      }
+    }
+  }
+  .ant-menu-item-selected {
+    &::after {
+      border-bottom-color: $green-color;
+    }
+  }
 }

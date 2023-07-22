@@ -1,0 +1,50 @@
+@import "../../variables.scss";
+
+.footer {
+  background: url("../../../public/images/bg-footer.jpg") 0 0 no-repeat;
+  background-size: cover;
+  height: 400px;
+  .container {
+    padding: 45px 0 0;
+  }
+  .footerTop {
+    height: 230px;
+  }
+  h2 {
+    color: $yellow-color;
+    font-size: 17px;
+    margin-bottom: 25px;
+  }
+  p {
+    color: #ffffff;
+    line-height: 22px;
+  }
+  .readMoreBtn {
+    background: transparent;
+    color: $yellow-color;
+    font-weight: bold;
+    border: none;
+    padding: 0;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      color: #ffffff;
+      display: flex;
+      margin-bottom: 15px;
+      .anticon {
+        margin-right: 10px;
+      }
+    }
+  }
+  .copyrights {
+    border-top: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    padding-top: 25px;
+    margin-top: 55px;
+  }
+}

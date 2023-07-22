@@ -1,0 +1,46 @@
+@import "../../variables.scss";
+
+.headerBar {
+  background: $green-color;
+  height: 30px;
+  margin-bottom: 15px;
+}
+.topBar {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  .anticon-facebook {
+    color: #ffffff;
+  }
+}
+.mainHeader {
+  padding-bottom: 15px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgb(216, 216, 216);
+  .phoneNumber {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    .anticon-phone {
+      font-size: 32px;
+      margin-right: 5px;
+      rotate: 100deg;
+      opacity: 0.7;
+      margin-top: 4px;
+    }
+    p {
+      text-transform: uppercase;
+      font-size: 18px;
+      strong {
+        color: gray;
+        font-size: 13px;
+      }
+    }
+  }
+}

@@ -8,11 +8,16 @@ h5,
 h6 {
   text-transform: uppercase;
 }
+p {
+  line-height: 25px;
+  color: $paraghraph-color;
+}
 .container {
   width: 1200px;
   margin: auto;
 }
-.primary_btn {
+.primary_btn,
+.ant-btn-primary {
   background: $primary-color;
   color: #ffffff;
   font-size: 12px;
@@ -24,7 +29,8 @@ h6 {
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  &:hover {
+  &:hover:not(:disabled):not(.ant-btn-disabled) {
     color: #ffffff;
+    background: $green-color;
   }
 }

@@ -1,51 +1,32 @@
-import { Col, Row } from "antd";
+import { Button, Col, Row } from "antd";
 import "./style.scss";
+import { productList, productListHeading1 } from "./content";
+import { useAppContext } from "../../context";
 
 const PulsesProductCategory = () => {
+  const { setRoute } = useAppContext();
   return (
     <div className="container">
-      <h1>Pulses Product</h1>
+      <h1>{productListHeading1}</h1>
       <Row gutter={50}>
-        <Col span={6}>
-          <div className="product">
-            <img src="./images/pulse1.png" alt="pulse" />
-            <h2>Arhar Dal</h2>
-            <p>Price - $12.50</p>
-            <a href="/" className="primary_btn">
-              Buy Now
-            </a>
-          </div>
-        </Col>
-        <Col span={6}>
-          <div className="product">
-            <img src="./images/pulse2.png" alt="pulse" />
-            <h2>Arhar Dal</h2>
-            <p>Price - $12.50</p>
-            <a href="/" className="primary_btn">
-              Buy Now
-            </a>
-          </div>
-        </Col>
-        <Col span={6}>
-          <div className="product">
-            <img src="./images/pulse3.png" alt="pulse" />
-            <h2>Arhar Dal</h2>
-            <p>Price - $12.50</p>
-            <a href="/" className="primary_btn">
-              Buy Now
-            </a>
-          </div>
-        </Col>
-        <Col span={6}>
-          <div className="product">
-            <img src="./images/pulse4.png" alt="pulse" />
-            <h2>Arhar Dal</h2>
-            <p>Price - $12.50</p>
-            <a href="/" className="primary_btn">
-              Buy Now
-            </a>
-          </div>
-        </Col>
+        {productList.map((c) => {
+          return (
+            <Col key={c.key} span={6}>
+              <div className="product">
+                <img src={c.productImg} alt="pulse" />
+                <h2>{c.name}</h2>
+                <p>Price - {c.price}</p>
+                <Button
+                  onClick={() => setRoute(`${c.buttonLink}`)}
+                  type="primary"
+                  className="primary_btn"
+                >
+                  {c.buttonText}
+                </Button>
+              </div>
+            </Col>
+          );
+        })}
       </Row>
     </div>
   );

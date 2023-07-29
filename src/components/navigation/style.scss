@@ -26,5 +26,10 @@
     &::after {
       border-bottom-color: $green-color;
     }
+    &:hover {
+      &::after {
+        border-bottom-color: $green-color;
+      }
+    }
   }
 }

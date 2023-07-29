@@ -7,48 +7,46 @@ import {
   CopyrightCircleOutlined,
 } from "@ant-design/icons";
 import "./style.scss";
+import { about, contact, copyrightText } from "./content";
+import { useAppContext } from "../../context";
 
 const Footer = () => {
+  const { setRoute } = useAppContext();
   return (
     <div className="footer">
       <div className="container footerTop">
         <Row justify="space-between">
           <Col span={17}>
-            <h2>About Us</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book. since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a type
-              specimen book. since the 1500s, when an unknown printer took a
-              galley of type and scrambled it to make a type specimen book.
-            </p>
-            <Button className="readMoreBtn">Read More</Button>
+            <h2>{about.title}</h2>
+            <p>{about.text}</p>
+            <Button
+              onClick={() => setRoute(`${about.buttonLink}`)}
+              className="readMoreBtn"
+            >
+              {about.buttonText}
+            </Button>
           </Col>
           <Col span={5}>
-            <h2>Contact Us</h2>
+            <h2>{contact.title}</h2>
             <ul>
               <li>
-                <HomeFilled /> 11244 Nikki Lauda 455 New Zealand
+                <HomeFilled /> {contact.address}
               </li>
               <li>
-                <PhoneFilled /> 0000 - 123 - 456789
+                <PhoneFilled /> {contact.contactNumber}
               </li>
               <li>
-                <ClockCircleOutlined /> 9:30AM - 7:30PM
+                <ClockCircleOutlined /> {contact.timing}
               </li>
               <li>
-                <MailOutlined /> mail@gmail.com
+                <MailOutlined /> {contact.emailId}
               </li>
             </ul>
           </Col>
         </Row>
       </div>
       <div className="copyrights">
-        <CopyrightCircleOutlined /> Farm To You Fresh
+        <CopyrightCircleOutlined /> {copyrightText}
       </div>
     </div>
   );

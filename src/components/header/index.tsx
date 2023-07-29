@@ -3,21 +3,16 @@ import { FacebookOutlined, PhoneOutlined } from "@ant-design/icons";
 import "./style.scss";
 import { Col, Row } from "antd";
 import React from "react";
+import { facebookLink, logo, phoneDetail, topheaderText } from "./content";
 
-interface HeaderProps {
-  route: string;
-  setRoute: any;
-}
-
-const Header: React.FC<HeaderProps> = (props) => {
-  const { route, setRoute } = props;
+const Header: React.FC = () => {
   return (
     <>
       <div className="headerBar">
         <div className="container">
           <div className="topBar">
-            <p>Buy organic - dals & pulses/spices online at best price</p>
-            <a href="/">
+            <p>{topheaderText}</p>
+            <a href={facebookLink}>
               <FacebookOutlined />
             </a>
           </div>
@@ -27,19 +22,20 @@ const Header: React.FC<HeaderProps> = (props) => {
         <div className="container">
           <Row align="middle">
             <Col span={7} className="logo">
-              <a href="/">
-                <img src="./images/logo.png" alt="Farm To You Fresh" />
+              <a href={logo.linkPath}>
+                <img src={logo.imgPath} alt={logo.imgAlt} />
               </a>
             </Col>
             <Col span={14}>
-              <Navigation route={route} setRoute={setRoute} />
+              <Navigation />
             </Col>
             <Col span={3}>
               <div className="phoneNumber">
                 <PhoneOutlined />
                 <p>
-                  <strong>Call us now</strong>
-                  <br></br>+123 456 890
+                  <strong>{phoneDetail.text}</strong>
+                  <br></br>
+                  {phoneDetail.number}
                 </p>
               </div>
             </Col>

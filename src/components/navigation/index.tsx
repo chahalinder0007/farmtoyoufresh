@@ -2,41 +2,11 @@ import React from "react";
 import "./style.scss";
 import type { MenuProps } from "antd";
 import { Menu } from "antd";
+import { useAppContext } from "../../context";
+import { items } from "./content";
 
-interface NavProps {
-  route: string;
-  setRoute: any;
-}
-
-const items: MenuProps["items"] = [
-  {
-    label: "Home",
-    key: "/",
-  },
-  {
-    label: "Products",
-    key: "products",
-  },
-  {
-    label: "About Us",
-    key: "about",
-  },
-  {
-    label: "Quality",
-    key: "quality",
-  },
-  {
-    label: "Testimonial",
-    key: "testimonial",
-  },
-  {
-    label: "Contact Us",
-    key: "contact",
-  },
-];
-
-const Navigation: React.FC<NavProps> = (props) => {
-  const { route, setRoute } = props;
+const Navigation: React.FC = () => {
+  const { route, setRoute } = useAppContext();
 
   const onClick: MenuProps["onClick"] = (e) => {
     setRoute(e.key);

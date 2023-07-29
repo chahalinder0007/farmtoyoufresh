@@ -1,0 +1,33 @@
+@import "../../variables.scss";
+
+.aboutUs {
+  .aboutContent {
+    margin: 50px 0;
+    .textBlock {
+      h1 {
+        margin: 0;
+        font-size: 20px;
+        text-align: left;
+        color: $primary-color;
+      }
+      h3 {
+        font-size: 16px;
+        text-transform: none;
+      }
+    }
+    .options {
+      text-align: center;
+      margin-top: 80px;
+      .optIcon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: $orange-color;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        border: 15px solid #fce3cd;
+      }
+    }
+  }
+}

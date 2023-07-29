@@ -1,51 +1,35 @@
-import { Col, Row } from "antd";
+import { Button, Col, Row } from "antd";
 import "../pulsesProductList/style.scss";
+import {
+  productList2,
+  productListHeading2,
+} from "../pulsesProductList/content";
+import { useAppContext } from "../../context";
 
 const SpicesProductCategory = () => {
+  const { setRoute } = useAppContext();
   return (
     <div className="container">
-      <h1>Spices Product</h1>
+      <h1>{productListHeading2}</h1>
       <Row gutter={50}>
-        <Col span={6}>
-          <div className="product">
-            <img src="./images/spice1.png" alt="pulse" />
-            <h2>Garam Masala</h2>
-            <p>Price - $12.50</p>
-            <a href="/" className="primary_btn">
-              Buy Now
-            </a>
-          </div>
-        </Col>
-        <Col span={6}>
-          <div className="product">
-            <img src="./images/spice2.png" alt="pulse" />
-            <h2>Garam Masala</h2>
-            <p>Price - $12.50</p>
-            <a href="/" className="primary_btn">
-              Buy Now
-            </a>
-          </div>
-        </Col>
-        <Col span={6}>
-          <div className="product">
-            <img src="./images/spice3.png" alt="pulse" />
-            <h2>Garam Masala</h2>
-            <p>Price - $12.50</p>
-            <a href="/" className="primary_btn">
-              Buy Now
-            </a>
-          </div>
-        </Col>
-        <Col span={6}>
-          <div className="product">
-            <img src="./images/spice4.png" alt="pulse" />
-            <h2>Garam Masala</h2>
-            <p>Price - $12.50</p>
-            <a href="/" className="primary_btn">
-              Buy Now
-            </a>
-          </div>
-        </Col>
+        {productList2.map((c) => {
+          return (
+            <Col key={c.key} span={6}>
+              <div className="product">
+                <img src={c.productImg} alt="pulse" />
+                <h2>{c.name}</h2>
+                <p>Price - {c.price}</p>
+                <Button
+                  onClick={() => setRoute(`${c.buttonLink}`)}
+                  type="primary"
+                  className="primary_btn"
+                >
+                  {c.buttonText}
+                </Button>
+              </div>
+            </Col>
+          );
+        })}
       </Row>
     </div>
   );

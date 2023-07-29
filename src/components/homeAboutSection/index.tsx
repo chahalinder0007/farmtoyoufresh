@@ -1,38 +1,31 @@
-import { Col, Row } from "antd";
+import { Button, Col, Row } from "antd";
 import "./style.scss";
+import { useAppContext } from "../../context";
+import { homeAboutContent } from "./content";
 
 const HomeAboutSection = () => {
+  const { setRoute } = useAppContext();
   return (
     <div className="container homeAboutContent">
       <Row justify="center" align="middle" gutter={50}>
         <Col span={12}>
           <div className="aboutContent">
-            <h4>Company Profile</h4>
-            <h2>About Farm To You Fresh</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries. Lorem Ipsum is simply dummy text
-              of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an
-              unknown printer took a galley of type and scrambled it to make a
-              type specimen book. It has survived not only five centuries. Lorem
-              Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries.
-            </p>
-            <a href="/" className="primary_btn">
-              View More
-            </a>
+            <h4 style={{ color: `${homeAboutContent.smallTitleColor}` }}>
+              {homeAboutContent.smallTitle}
+            </h4>
+            <h2>{homeAboutContent.mainTitle}</h2>
+            <p>{homeAboutContent.aboutText}</p>
+            <Button
+              onClick={() => setRoute(`${homeAboutContent.buttonLink}`)}
+              className="primary_btn"
+            >
+              {homeAboutContent.buttonText}
+            </Button>
           </div>
         </Col>
         <Col span={12}>
           <div className="aboutImage">
-            <img src="./images/about.png" alt="product images" />
+            <img src={homeAboutContent.sideImage} alt="product images" />
           </div>
         </Col>
       </Row>

@@ -1,3 +1,4 @@
+import React from "react";
 import HomeAboutSection from "../homeAboutSection";
 import HomeSlider from "../homeSlider";
 import HomeTestimonials from "../homeTestimonials";
@@ -6,7 +7,11 @@ import PulsesProductCategory from "../pulsesProductList";
 import SpicesProductCategory from "../spicesProductList";
 import "./style.scss";
 
-const Home = () => {
+// interface HomeProps {
+//   setRoute: any;
+// }
+
+const Home: React.FC = () => {
   return (
     <>
       <div className="slider">

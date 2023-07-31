@@ -3,7 +3,7 @@ export const topheaderText =
 
 export const facebookLink = "/";
 export const logo = {
-  imgPath: "./images/logo.png",
+  imgPath: "./images/logo.svg",
   imgAlt: "Farm To You Fresh",
   linkPath: "/",
 };

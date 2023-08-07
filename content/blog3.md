@@ -14,4 +14,4 @@ Try writing some markdown on the left.
 - Lets you define your own components (to render `MyHeading` instead of `h1`)
 - Has a lot of plugins
 
-![Alt Text](http://localhost:3000/images/logo.png)
+![Alt Text](https://farmtoyoufresh.com/images/logo.png)

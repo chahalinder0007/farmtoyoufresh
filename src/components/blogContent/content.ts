@@ -8,8 +8,7 @@ export const list = [
     date: "March 17, 2023",
     title: "Best guide to shopping for organic ingredients.",
     buttonText: "Read more",
-    buttonLink: "blogContent",
-    fileName: "blog1",
+    buttonLink: "/",
   },
   {
     key: "2",
@@ -17,8 +16,7 @@ export const list = [
     date: "March 17, 2023",
     title: "Best guide to shopping for organic ingredients.",
     buttonText: "Read more",
-    buttonLink: "blogContent",
-    fileName: "blog2",
+    buttonLink: "/",
   },
   {
     key: "3",
@@ -26,8 +24,7 @@ export const list = [
     date: "March 17, 2023",
     title: "Best guide to shopping for organic ingredients.",
     buttonText: "Read more",
-    buttonLink: "blogContent",
-    fileName: "blog3",
+    buttonLink: "/",
   },
   {
     key: "4",
@@ -35,8 +32,7 @@ export const list = [
     date: "March 17, 2023",
     title: "Best guide to shopping for organic ingredients.",
     buttonText: "Read more",
-    buttonLink: "blogContent",
-    fileName: "blog4",
+    buttonLink: "/",
   },
   {
     key: "5",
@@ -44,8 +40,7 @@ export const list = [
     date: "March 17, 2023",
     title: "Best guide to shopping for organic ingredients.",
     buttonText: "Read more",
-    buttonLink: "blogContent",
-    fileName: "blog5",
+    buttonLink: "/",
   },
   {
     key: "6",
@@ -53,8 +48,7 @@ export const list = [
     date: "March 17, 2023",
     title: "Best guide to shopping for organic ingredients.",
     buttonText: "Read more",
-    buttonLink: "blogContent",
-    fileName: "blog6",
+    buttonLink: "/",
   },
   {
     key: "7",
@@ -62,8 +56,7 @@ export const list = [
     date: "March 17, 2023",
     title: "Best guide to shopping for organic ingredients.",
     buttonText: "Read more",
-    buttonLink: "blogContent",
-    fileName: "blog7",
+    buttonLink: "/",
   },
   {
     key: "8",
@@ -71,8 +64,7 @@ export const list = [
     date: "March 17, 2023",
     title: "Best guide to shopping for organic ingredients.",
     buttonText: "Read more",
-    buttonLink: "blogContent",
-    fileName: "blog8",
+    buttonLink: "/",
   },
   {
     key: "9",
@@ -80,8 +72,7 @@ export const list = [
     date: "March 17, 2023",
     title: "Best guide to shopping for organic ingredients.",
     buttonText: "Read more",
-    buttonLink: "blogContent",
-    fileName: "blog9",
+    buttonLink: "/",
   },
   {
     key: "10",
@@ -89,8 +80,7 @@ export const list = [
     date: "March 17, 2023",
     title: "Best guide to shopping for organic ingredients.",
     buttonText: "Read more",
-    buttonLink: "blogContent",
-    fileName: "blog10",
+    buttonLink: "/",
   },
   {
     key: "11",
@@ -98,8 +88,7 @@ export const list = [
     date: "March 17, 2023",
     title: "Best guide to shopping for organic ingredients.",
     buttonText: "Read more",
-    buttonLink: "blogContent",
-    fileName: "blog11",
+    buttonLink: "/",
   },
   {
     key: "12",
@@ -107,7 +96,6 @@ export const list = [
     date: "March 17, 2023",
     title: "Best guide to shopping for organic ingredients.",
     buttonText: "Read more",
-    buttonLink: "blogContent",
-    fileName: "blog12",
+    buttonLink: "/",
   },
 ];

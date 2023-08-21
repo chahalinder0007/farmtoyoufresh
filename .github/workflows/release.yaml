@@ -24,7 +24,7 @@ jobs:
           git config user.email "chahal.inder0007@gmail.com"
 
       - name: Change to directory
-        run: cd farmtoyoufresh/tree/main
+        run: ls;cd farmtoyoufresh
 
       - name: Install dependencies
         run: npm i

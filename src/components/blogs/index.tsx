@@ -36,14 +36,7 @@ const Blogs: React.FC<BlogsProps> = (props) => {
                       </p>
                       <h2>{c.title}</h2>
                       <div className="bottomSection">
-                        <Button
-                          onClick={() => {
-                            setRoute(`${c.buttonLink}`);
-                            setFileName(`${c.fileName}`);
-                          }}
-                          type="primary"
-                          className="primary_btn"
-                        >
+                        <Button type="primary" className="primary_btn">
                           {c.buttonText}
                           <RightOutlined />
                         </Button>

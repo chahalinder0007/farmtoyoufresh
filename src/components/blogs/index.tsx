@@ -1,14 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Col, Row } from "antd";
 import "./style.scss";
 import { useAppContext } from "../../context";
 import { headerImg, list, pageHeading } from "./content";
 import HeaderInnerPages from "../headerInnerPages";
-import {
-  RightOutlined,
-  CommentOutlined,
-  CalendarOutlined,
-} from "@ant-design/icons";
+import { RightOutlined, CalendarOutlined } from "@ant-design/icons";
 
 interface BlogsProps {
   setFileName: (fileName: string) => void;

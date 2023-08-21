@@ -1,0 +1,48 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v2
+        with:
+          ref: main
+          token: ${{ secrets.GH_TOKEN }} # Use the token here
+
+      - name: Set up Git user information
+        run: |
+          git config user.name "chahalinder0007"
+          git config user.email "chahal.inder0007@gmail.com"
+
+      - name: Change to directory
+        run: cd farmtoyoufresh/tree/main
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Run deploy script
+        run: npm run deploy
+
+      - name: Wait for 30 seconds
+        run: sleep 30s
+
+      - name: Checkout gh-pages branch
+        run: |
+          git checkout gh-pages
+          git pull
+
+      - name: Create CNAME file
+        run: echo "farmtoyoufresh.com" > CNAME
+
+      - name: Commit and push changes
+        run: |
+          git add CNAME
+          git commit -m "Add CNAME file"
+          git push origin gh-pages

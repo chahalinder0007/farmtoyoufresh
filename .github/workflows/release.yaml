@@ -16,7 +16,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
           ref: main
-          token: ${{ secrets.GH_TOKEN }} # Use the token here
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: Set up Git user information
         run: |
@@ -34,13 +34,26 @@ jobs:
       - name: Wait for 30 seconds
         run: sleep 120s
 
+  update-gh-pages:
+    needs: deploy
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Checkout gh-pages branch
-        run: |
-          git checkout gh-pages
-          git pull
+        uses: actions/checkout@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        with:
+          ref: gh-pages
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: Create CNAME file
         run: echo "farmtoyoufresh.com" > CNAME
+
+      - name: Set up Git user information
+        run: |
+          git config user.name "chahalinder0007"
+          git config user.email "chahal.inder0007@gmail.com"
 
       - name: Commit and push changes
         run: |

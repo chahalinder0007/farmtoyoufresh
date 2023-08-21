@@ -2,6 +2,8 @@
 
 Turmeric, known as "haldi" in India, is a golden spice that has been a staple in Indian cuisine and traditional medicine for centuries. Its active compound, curcumin, is renowned for its anti-inflammatory, antioxidant, and healing properties. Let's explore how turmeric can be a vital part of a healthy lifestyle.
 
+![Main title](https://farmtoyoufresh.com/images/blogs/blog_1/title_blog_1.jpg)
+
 ## **Healthy Diet and Nutrition**
 
 ### **Balanced Diet**

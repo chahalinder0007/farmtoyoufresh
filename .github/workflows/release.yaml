@@ -27,7 +27,9 @@ jobs:
         run: npm i
 
       - name: Run deploy script
-        run: npm run deploy
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/chahalinder0007/farmtoyoufresh.git
+          npm run deploy
 
       - name: Wait for 30 seconds
         run: sleep 120s

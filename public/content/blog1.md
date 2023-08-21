@@ -16,6 +16,11 @@ Turmeric, known as "haldi" in India, is a golden spice that has been a staple in
 - **Rich in Vitamins and Minerals**: Turmeric contains vitamins B and C, iron, calcium, and magnesium.
 - **Herbalife Nutrition Afresh Energy Drink Mix**: Some energy drinks include turmeric as an ingredient, offering a refreshing taste and added health benefits.
 
+
+
+![second image](https://farmtoyoufresh.com/images/blogs/blog_1/panda_filler.jpg)
+
+
 ## **Bloating and Digestive Health**
 
 - **Natural Remedy for Bloating**: Turmeric aids in digestion and can help reduce bloating and gas.

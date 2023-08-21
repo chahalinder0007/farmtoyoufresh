@@ -4,9 +4,9 @@ export const headerImg = "./images/inner-header-bg.png";
 export const list = [
   {
     key: "1",
-    img: "./images/blog-img1.png",
-    date: "March 17, 2023",
-    title: "Best guide to shopping for organic ingredients.",
+    img: "./images/blogs/main_header.jpg",
+    date: "August 21, 2023",
+    title: "Health Benifits of Turmeric",
     buttonText: "Read more",
     buttonLink: "blogContent",
     fileName: "blog1",

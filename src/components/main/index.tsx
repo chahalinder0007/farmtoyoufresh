@@ -8,28 +8,22 @@ import Contact from "../contact";
 import Products from "../products";
 import Blogs from "../blogs";
 import BlogContent from "../blogContent";
-import { Routes, Route, HashRouter } from "react-router-dom";
+import { useAppContext } from "../../context";
 
 const Main: React.FC = () => {
+  const { route } = useAppContext();
   const [fileName, setFileName] = useState("blog1");
 
   return (
     <>
       <Header />
-      <HashRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="products" element={<Products />} />
-          <Route path="blogs" element={<Blogs setFileName={setFileName} />} />
-          <Route
-            path="blogContent"
-            element={<BlogContent fileName={fileName} />}
-          />
-          <Route path="testimonials" element={<Testimonials />} />
-          <Route path="contact" element={<Contact />} />
-        </Routes>
-      </HashRouter>
+      {route === "/" && <Home />}
+      {route === "about" && <About />}
+      {route === "products" && <Products />}
+      {route === "blogs" && <Blogs setFileName={setFileName} />}
+      {route === "blogContent" && <BlogContent fileName={fileName} />}
+      {route === "testimonials" && <Testimonials />}
+      {route === "contact" && <Contact />}
       <Footer />
     </>
   );

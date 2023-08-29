@@ -1,30 +1,35 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState } from "react";
 import Home from "../home";
 import About from "../about";
 import Header from "../header";
 import Footer from "../footer";
-import { useAppContext } from "../../context";
 import Testimonials from "../testimonials";
 import Contact from "../contact";
 import Products from "../products";
 import Blogs from "../blogs";
 import BlogContent from "../blogContent";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Main: React.FC = () => {
-  const { route } = useAppContext();
   const [fileName, setFileName] = useState("blog1");
 
   return (
     <>
       <Header />
-      {route === "/" && <Home />}
-      {route === "about" && <About />}
-      {route === "products" && <Products />}
-      {route === "blogs" && <Blogs setFileName={setFileName} />}
-      {route === "blogContent" && <BlogContent fileName={fileName} />}
-      {route === "testimonials" && <Testimonials />}
-      {route === "contact" && <Contact />}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="products" element={<Products />} />
+          <Route path="blogs" element={<Blogs setFileName={setFileName} />} />
+          <Route
+            path="blogContent"
+            element={<BlogContent fileName={fileName} />}
+          />
+          <Route path="testimonials" element={<Testimonials />} />
+          <Route path="contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
       <Footer />
     </>
   );

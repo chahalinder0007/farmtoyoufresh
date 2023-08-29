@@ -2,13 +2,31 @@ import React from "react";
 import HeaderInnerPages from "../headerInnerPages";
 import { pageHeading, headerImg, list } from "./content";
 import "./style.scss";
-import { Button, Col, Form, Input, Row } from "antd";
+import { Button, Col, Form, Input, Row, notification } from "antd";
+import axios from "axios";
 const { TextArea } = Input;
 
 const Contact: React.FC = () => {
   const [form] = Form.useForm();
   const onFinish = (values: any) => {
     console.log(values);
+    axios
+      .post(
+        "https://2i3hczxjzubwztc6db2q7ucmfi0qobel.lambda-url.us-east-1.on.aws",
+        values
+      )
+      .then((res) => {
+        console.log("res: ", res);
+        notification.success({
+          message:
+            "Thanks for contacting us. We will get back to you very soon.",
+        });
+      })
+      .catch(() => {
+        notification.error({
+          message: "Something went wrong. Please try later.",
+        });
+      });
   };
   return (
     <>
@@ -73,7 +91,7 @@ const Contact: React.FC = () => {
                     <Col span={24}>
                       <Form.Item
                         label="Type Your Message"
-                        name="message"
+                        name="comment"
                         rules={[
                           {
                             required: true,

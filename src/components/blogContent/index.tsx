@@ -25,7 +25,7 @@ const BlogContent: React.FC<BlogContentProps> = (props) => {
   return (
     <>
       <HeaderInnerPages pageHeading={pageHeading} headerImg={headerImg} />
-      <div className="container">
+      <div className="container blogContent">
         <ReactMarkdown>{text}</ReactMarkdown>
       </div>
     </>

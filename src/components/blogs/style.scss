@@ -3,10 +3,14 @@
 .blogs {
   margin: 50px 0;
   .blog {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    a {
+      color: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+    }
     img {
       width: 94%;
       max-height: 287px;

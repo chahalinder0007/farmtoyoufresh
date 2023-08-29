@@ -29,22 +29,24 @@ const Blogs: React.FC<BlogsProps> = (props) => {
                       setFileName(`${c.fileName}`);
                     }}
                   >
-                    <img src={c.img} alt="" />
-                    <div className="blogContent">
-                      <p>
-                        <CalendarOutlined /> {c.date}
-                      </p>
-                      <h2>{c.title}</h2>
-                      <div className="bottomSection">
-                        <Button type="primary" className="primary_btn">
-                          {c.buttonText}
-                          <RightOutlined />
-                        </Button>
-                        {/* <div className="comments">
+                    <a href="blogContent" target="_blank" rel="noreferrer">
+                      <img src={c.img} alt="" />
+                      <div className="blogContent">
+                        <p>
+                          <CalendarOutlined /> {c.date}
+                        </p>
+                        <h2>{c.title}</h2>
+                        <div className="bottomSection">
+                          <Button type="primary" className="primary_btn">
+                            {c.buttonText}
+                            <RightOutlined />
+                          </Button>
+                          {/* <div className="comments">
                           <CommentOutlined /> 02
                         </div> */}
+                        </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </Col>
               );

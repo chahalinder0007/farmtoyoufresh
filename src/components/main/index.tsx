@@ -8,7 +8,7 @@ import Contact from "../contact";
 import Products from "../products";
 import Blogs from "../blogs";
 import BlogContent from "../blogContent";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 
 const Main: React.FC = () => {
   const [fileName, setFileName] = useState("blog1");
@@ -16,7 +16,7 @@ const Main: React.FC = () => {
   return (
     <>
       <Header />
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
@@ -29,7 +29,7 @@ const Main: React.FC = () => {
           <Route path="testimonials" element={<Testimonials />} />
           <Route path="contact" element={<Contact />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       <Footer />
     </>
   );

@@ -9,6 +9,7 @@ import Products from "../products";
 import Blogs from "../blogs";
 import BlogContent from "../blogContent";
 import { useAppContext } from "../../context";
+import Counter from "../counter";
 
 const Main: React.FC = () => {
   const { route } = useAppContext();
@@ -25,6 +26,7 @@ const Main: React.FC = () => {
       {route === "testimonials" && <Testimonials />}
       {route === "contact" && <Contact />}
       <Footer />
+      <Counter />
     </>
   );
 };

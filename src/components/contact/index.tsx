@@ -9,18 +9,19 @@ const { TextArea } = Input;
 const Contact: React.FC = () => {
   const [form] = Form.useForm();
   const onFinish = (values: any) => {
-    console.log(values);
     axios
       .post(
         "https://2i3hczxjzubwztc6db2q7ucmfi0qobel.lambda-url.us-east-1.on.aws",
         values
       )
       .then((res) => {
-        console.log("res: ", res);
-        notification.success({
-          message:
-            "Thanks for contacting us. We will get back to you very soon.",
-        });
+        if (res) {
+          notification.success({
+            message:
+              "Thanks for contacting us. We will get back to you very soon.",
+          });
+          form.resetFields();
+        }
       })
       .catch(() => {
         notification.error({

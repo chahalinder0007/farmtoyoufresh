@@ -15,7 +15,7 @@ const Counter: React.FC = () => {
             setOrderCount(res?.data?.order_count);
           }
         });
-    }, 5000);
+    }, 30000);
     return () => clearInterval(interval);
   }, [orderCount]);
   return (

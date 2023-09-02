@@ -8,6 +8,6 @@ export const logo = {
   linkPath: "/",
 };
 export const phoneDetail = {
-  number: "+123 456 789",
+  number: "+919780780995",
   text: "Call us now",
 };

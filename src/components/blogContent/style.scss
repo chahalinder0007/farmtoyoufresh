@@ -73,8 +73,15 @@
     color: #000000;
   }
   img {
-    max-width: 500px;
+    max-width: 700px;
     display: block;
     margin: 15px auto;
+  }
+  ul {
+    padding-left: 20px;
+    li {
+      margin-bottom: 5px;
+      line-height: 25px;
+    }
   }
 }

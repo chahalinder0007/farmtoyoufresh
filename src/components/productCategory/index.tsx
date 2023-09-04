@@ -17,14 +17,11 @@ const ProductCategory = () => {
                   style={{
                     background: `url("${c.backgroundImg}") 0 0 no-repeat`,
                   }}
+                  onClick={() => setRoute(`${c.buttonLink}`)}
                 >
                   <h2>{c.title}</h2>
                   <p>{c.text}</p>
-                  <Button
-                    onClick={() => setRoute(`${c.buttonLink}`)}
-                    type="primary"
-                    className="primary_btn"
-                  >
+                  <Button type="primary" className="primary_btn">
                     {c.buttonText}
                   </Button>
                 </div>

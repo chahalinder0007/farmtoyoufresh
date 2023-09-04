@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HeaderInnerPages from "../headerInnerPages";
 import { pageHeading, headerImg, content, options } from "./content";
 import "./style.scss";
 import { Col, Row } from "antd";
+import axios from "axios";
+import ReactMarkdown from "react-markdown";
 
 const About: React.FC = () => {
+  const [text, setText] = useState("");
+
+  useEffect(() => {
+    axios.get(`/content/aboutus.md`, { responseType: "text" }).then((res) => {
+      setText(res.data);
+    });
+  }, []);
+
   return (
     <>
       <HeaderInnerPages pageHeading={pageHeading} headerImg={headerImg} />
@@ -13,9 +23,7 @@ const About: React.FC = () => {
           <Row gutter={50}>
             <Col span={12}>
               <div className="textBlock">
-                <h1>{content.heading}</h1>
-                <h3>{content.smallHeading}</h3>
-                <p>{content.text}</p>
+                <ReactMarkdown>{text}</ReactMarkdown>
               </div>
             </Col>
             <Col span={12}>

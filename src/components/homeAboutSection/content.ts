@@ -1,9 +1,9 @@
 export const homeAboutContent = {
-  smallTitle: "Company Profile",
+  smallTitle: "About Us",
   smallTitleColor: "#0e9210",
-  mainTitle: "About farm to you fresh",
+  mainTitle: "Your Health, Our Harvest",
   aboutText:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+    "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
   buttonText: "View More",
   buttonLink: "about",
   sideImage: "./images/about.png",

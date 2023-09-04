@@ -12,15 +12,14 @@ const PulsesProductCategory = () => {
         {productList.map((c) => {
           return (
             <Col key={c.key} span={6}>
-              <div className="product">
+              <div
+                className="product"
+                onClick={() => setRoute(`${c.buttonLink}`)}
+              >
                 <img src={c.productImg} alt="pulse" />
                 <h2>{c.name}</h2>
                 <p>Price - {c.price}</p>
-                <Button
-                  onClick={() => setRoute(`${c.buttonLink}`)}
-                  type="primary"
-                  className="primary_btn"
-                >
+                <Button type="primary" className="primary_btn">
                   {c.buttonText}
                 </Button>
               </div>

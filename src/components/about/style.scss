@@ -5,7 +5,7 @@
     margin: 50px 0;
     .textBlock {
       h1 {
-        margin: 0;
+        margin: 0 0 5px;
         font-size: 20px;
         text-align: left;
         color: $primary-color;
@@ -13,6 +13,9 @@
       h3 {
         font-size: 16px;
         text-transform: none;
+      }
+      p {
+        margin-top: 0;
       }
     }
     .options {

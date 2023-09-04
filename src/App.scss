@@ -1,4 +1,6 @@
 @import "./variables.scss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
 h1,
 h2,
@@ -33,4 +35,19 @@ p {
     color: #ffffff;
     background: $green-color;
   }
+}
+
+.slick-prev,
+.slick-next {
+  bottom: -30px;
+  top: auto;
+  &::before {
+    color: #000000;
+  }
+}
+.slick-prev {
+  left: 0;
+}
+.slick-next {
+  left: 25px;
 }

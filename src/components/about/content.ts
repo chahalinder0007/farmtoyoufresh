@@ -14,17 +14,17 @@ export const options = [
   },
   {
     icon: "./images/support.png",
-    title: "Support 24/7",
-    text: "Purchasing from select family farmers who farm organically.",
+    title: "Reliable Support Guranted",
+    text: "You are welcome to call us between 11 a.m. to 9 p.m. for any support.",
   },
   {
     icon: "./images/secured.png",
     title: "Secured Payment",
-    text: "Purchasing from select family farmers who farm organically.",
+    text: "Our payments are secured by .....",
   },
   {
     icon: "./images/return.png",
     title: "Return Policy",
-    text: "Purchasing from select family farmers who farm organically.",
+    text: "In case of product damaged or not to our quality we will replace it no questions asked.",
   },
 ];

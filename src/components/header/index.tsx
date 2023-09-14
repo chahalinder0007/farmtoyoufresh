@@ -27,7 +27,7 @@ const Header: React.FC = () => {
       <div className="mainHeader">
         <div className="container">
           <Row align="middle">
-            <Col xs={18} span={7} className="logo">
+            <Col xs={18} lg={7} className="logo">
               <a href={logo.linkPath}>
                 <img src={logo.imgPath} alt={logo.imgAlt} />
               </a>

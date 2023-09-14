@@ -21,19 +21,19 @@ const About: React.FC = () => {
       <div className="container aboutUs">
         <div className="aboutContent">
           <Row gutter={50}>
-            <Col span={12}>
+            <Col xs={24} lg={12}>
               <div className="textBlock">
                 <ReactMarkdown>{text}</ReactMarkdown>
               </div>
             </Col>
-            <Col span={12}>
-              <img src={content.sideImg} alt="" />
+            <Col xs={24} lg={12}>
+              <img className="aboutSideImg" src={content.sideImg} alt="" />
             </Col>
           </Row>
           <Row justify="center" align="middle" gutter={50}>
             {options.map((c) => {
               return (
-                <Col span={6}>
+                <Col xs={24} sm={12} lg={6}>
                   <div className="options">
                     <div className="optIcon">
                       <img src={c.icon} alt="" />

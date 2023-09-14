@@ -14,10 +14,20 @@ p {
   line-height: 25px;
   color: $paraghraph-color;
 }
-.container {
-  width: 1200px;
-  margin: auto;
+#root {
+  display: flex;
+  flex-direction: column;
 }
+.container {
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    margin: auto;
+  }
+}
+
 .primary_btn,
 .ant-btn-primary {
   background: $primary-color;

@@ -11,7 +11,7 @@ const PulsesProductCategory = () => {
       <Row gutter={50}>
         {productList.map((c) => {
           return (
-            <Col key={c.key} span={6}>
+            <Col key={c.key} xs={24} sm={12} lg={6}>
               <div
                 className="product"
                 onClick={() => setRoute(`${c.buttonLink}`)}

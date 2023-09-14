@@ -11,11 +11,11 @@ const ProductCategory = () => {
         <Row gutter={50}>
           {productCategories.map((c) => {
             return (
-              <Col key={c.key} span={12}>
+              <Col key={c.key} xs={24} sm={12} lg={12}>
                 <div
                   className="category"
                   style={{
-                    background: `url("${c.backgroundImg}") 0 0 no-repeat`,
+                    backgroundImage: `url("${c.backgroundImg}")`,
                   }}
                   onClick={() => setRoute(`${c.buttonLink}`)}
                 >

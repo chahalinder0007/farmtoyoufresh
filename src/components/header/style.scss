@@ -2,21 +2,45 @@
 
 .headerBar {
   background: $green-color;
-  height: 30px;
+  height: auto;
   margin-bottom: 15px;
 }
 .topBar {
-  height: 30px;
-  display: flex;
-  justify-content: space-between;
+  height: auto;
   align-items: center;
+  padding: 0 10px;
   p {
     color: #ffffff;
     font-size: 14px;
     text-transform: uppercase;
+    margin: 0;
   }
   .anticon-facebook {
     color: #ffffff;
+  }
+  .facebook {
+    text-align: right;
+  }
+}
+
+.ant-menu-light > .ant-menu .ant-menu-item-selected {
+  background: $green-color;
+  color: #ffffff;
+}
+.ant-menu .ant-menu-submenu-title .anticon {
+  font-size: 30px;
+  color: $green-color;
+}
+.ant-menu-light.ant-menu-horizontal > .ant-menu-submenu-selected::after {
+  border-bottom-color: $green-color;
+}
+@media screen and (min-width: 1200px) {
+  .headerBar {
+    height: 30px;
+  }
+  .topBar {
+    padding: 0;
+    height: 30px;
   }
 }
 .mainHeader {
@@ -48,6 +72,20 @@
         color: gray;
         font-size: 13px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mainHeader {
+    .logo {
+      img {
+        width: 55px;
+        margin-left: 15px;
+      }
+    }
+    .phoneNumber {
+      display: none;
     }
   }
 }

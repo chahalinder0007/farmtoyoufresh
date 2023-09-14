@@ -16,7 +16,7 @@ const Footer = () => {
     <div className="footer">
       <div className="container footerTop">
         <Row justify="space-between">
-          <Col span={17}>
+          <Col xs={24} lg={17} className="footerAboutus">
             <h2>{about.title}</h2>
             <p>{about.text}</p>
             <Button
@@ -26,7 +26,7 @@ const Footer = () => {
               {about.buttonText}
             </Button>
           </Col>
-          <Col span={5}>
+          <Col xs={24} lg={5}>
             <h2>{contact.title}</h2>
             <ul>
               <li>

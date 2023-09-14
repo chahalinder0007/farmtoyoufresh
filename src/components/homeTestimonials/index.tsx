@@ -19,10 +19,10 @@ const HomeTestimonials = () => {
     <div className="homeTestimonialContent">
       <div className="container">
         <Row justify="center" align="middle" gutter={50}>
-          <Col span={12}>
-            <img src={image} alt="product images" />
+          <Col xs={24} lg={12}>
+            <img src={image} className="testimonialImg" alt="product images" />
           </Col>
-          <Col span={12}>
+          <Col xs={24} lg={12}>
             <h1>
               {title}
               <img src="./images/quotes.png" alt="" />

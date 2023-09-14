@@ -8,7 +8,7 @@ const HomeAboutSection = () => {
   return (
     <div className="container homeAboutContent">
       <Row justify="center" align="middle" gutter={50}>
-        <Col span={12}>
+        <Col xs={24} lg={12}>
           <div className="aboutContent">
             <h4 style={{ color: `${homeAboutContent.smallTitleColor}` }}>
               {homeAboutContent.smallTitle}
@@ -23,7 +23,7 @@ const HomeAboutSection = () => {
             </Button>
           </div>
         </Col>
-        <Col span={12}>
+        <Col xs={24} lg={12}>
           <div className="aboutImage">
             <img src={homeAboutContent.sideImage} alt="product images" />
           </div>

@@ -5,6 +5,7 @@ import HomeTestimonials from "../homeTestimonials";
 import ProductCategory from "../productCategory";
 import PulsesProductCategory from "../pulsesProductList";
 import SpicesProductCategory from "../spicesProductList";
+import "./style.scss";
 
 const Home: React.FC = () => {
   return (

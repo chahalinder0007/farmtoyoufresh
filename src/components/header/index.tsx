@@ -11,25 +11,31 @@ const Header: React.FC = () => {
       <div className="headerBar">
         <div className="container">
           <div className="topBar">
-            <p>{topheaderText}</p>
-            <a href={facebookLink}>
-              <FacebookOutlined />
-            </a>
+            <Row align="middle">
+              <Col span={20}>
+                <p>{topheaderText}</p>
+              </Col>
+              <Col span={4} className="facebook">
+                <a href={facebookLink}>
+                  <FacebookOutlined />
+                </a>
+              </Col>
+            </Row>
           </div>
         </div>
       </div>
       <div className="mainHeader">
         <div className="container">
           <Row align="middle">
-            <Col span={7} className="logo">
+            <Col xs={18} span={7} className="logo">
               <a href={logo.linkPath}>
                 <img src={logo.imgPath} alt={logo.imgAlt} />
               </a>
             </Col>
-            <Col span={14}>
+            <Col xs={6} lg={14}>
               <Navigation />
             </Col>
-            <Col span={3}>
+            <Col xs={0} lg={3}>
               <div className="phoneNumber">
                 <PhoneOutlined />
                 <p>

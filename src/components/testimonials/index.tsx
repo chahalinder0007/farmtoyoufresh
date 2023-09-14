@@ -13,7 +13,7 @@ const Testimonials: React.FC = () => {
           <Row justify="center" align="middle" gutter={50}>
             {list.map((c) => {
               return (
-                <Col span={6}>
+                <Col xs={24} sm={12} lg={6}>
                   <div className="comment">
                     <div className="userPic">
                       <img src={c.icon} alt="" />

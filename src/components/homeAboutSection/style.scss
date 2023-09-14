@@ -9,4 +9,17 @@
     line-height: 25px;
     text-align: justify;
   }
+  .aboutImage {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .homeAboutContent {
+    .aboutContent {
+      margin-bottom: 15px;
+    }
+  }
 }

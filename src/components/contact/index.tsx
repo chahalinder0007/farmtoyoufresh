@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
           <Row justify="center" align="middle" gutter={50}>
             {list.map((c) => {
               return (
-                <Col span={8}>
+                <Col xs={24} sm={12} lg={8}>
                   <div className="contactBlock">
                     <div className="icon">
                       <img src={c.icon} alt="" />
@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
             })}
           </Row>
           <Row justify="center">
-            <Col span={14}>
+            <Col sm={24} lg={14}>
               <div className="contactForm">
                 <h1>Feel free you can share your queries.</h1>
                 <Form
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
                   layout="vertical"
                 >
                   <Row gutter={50}>
-                    <Col span={12}>
+                    <Col xs={24} lg={12}>
                       <Form.Item
                         label="Full Name"
                         name="name"
@@ -75,7 +75,7 @@ const Contact: React.FC = () => {
                         <Input />
                       </Form.Item>
                     </Col>
-                    <Col span={12}>
+                    <Col xs={24} lg={12}>
                       <Form.Item
                         label="Email"
                         name="email"

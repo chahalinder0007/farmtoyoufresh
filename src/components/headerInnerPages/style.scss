@@ -14,3 +14,12 @@
     color: #ffffff;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .innerHeader {
+    padding: 0 15px;
+    h1 {
+      font-size: 25px;
+    }
+  }
+}

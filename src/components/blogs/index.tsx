@@ -21,7 +21,7 @@ const Blogs: React.FC<BlogsProps> = (props) => {
           <Row>
             {list.map((c) => {
               return (
-                <Col key={c.key} span={8}>
+                <Col key={c.key} xs={24} sm={12} lg={8}>
                   <div
                     className="blog"
                     onClick={() => {

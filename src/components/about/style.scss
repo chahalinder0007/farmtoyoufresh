@@ -36,7 +36,21 @@
 }
 
 @media screen and (max-width: 767px) {
+  .aboutUs {
+    .aboutContent {
+      .textBlock {
+        padding: 0 15px;
+      }
+      .options {
+        padding: 0 15px;
+      }
+    }
+  }
   .aboutSideImg {
-    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    img {
+      width: 60%;
+    }
   }
 }

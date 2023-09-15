@@ -26,8 +26,8 @@ const About: React.FC = () => {
                 <ReactMarkdown>{text}</ReactMarkdown>
               </div>
             </Col>
-            <Col xs={24} lg={12}>
-              <img className="aboutSideImg" src={content.sideImg} alt="" />
+            <Col xs={24} lg={12} className="aboutSideImg">
+              <img src={content.sideImg} alt="" />
             </Col>
           </Row>
           <Row justify="center" align="middle" gutter={50}>

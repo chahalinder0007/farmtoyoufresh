@@ -13,7 +13,7 @@ export const list = [
   },
   {
     key: "1",
-    img: "./images/blogs/blog_2/jawan-poster.jpeg",
+    img: "./images/blogs/blog_2/second.png",
     date: "September 11, 2023",
     title: "THE UNSEEN CONNECTION BETWEEN SHAHRUKH KHAN'S 'JAWAN' AND ORGANIC TURMERIC POWDER",
     buttonText: "Read more",

@@ -33,7 +33,7 @@ export const slides = [
     h1Color: "#038D06",
     h2: "Pulses, Spices, Herbs",
     h2Color: "#000000",
-    text: "Buy Products on wholesale price",
+    text: "Assured Quality Every Time",
     textColor: "#000000",
     buttonText: "View Products",
     buttonLink: "products",

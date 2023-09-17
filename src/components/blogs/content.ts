@@ -12,12 +12,21 @@ export const list = [
     fileName: "blog1",
   },
   {
-    key: "1",
+    key: "2",
     img: "./images/blogs/blog_2/second.png",
     date: "September 11, 2023",
     title: "THE UNSEEN CONNECTION BETWEEN SHAHRUKH KHAN'S 'JAWAN' AND ORGANIC TURMERIC POWDER",
     buttonText: "Read more",
     buttonLink: "blogContent",
     fileName: "blog2",
+  },
+  {
+    key: "3",
+    img: "./images/blogs/blog_3/first_image.png",
+    date: "September 17, 2023",
+    title: "The Golden Debate: Sun-Dried vs Boiled vs Artificially Baked Turmeric Powder",
+    buttonText: "Read more",
+    buttonLink: "blogContent",
+    fileName: "blog3",
   },
 ];

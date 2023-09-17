@@ -3,8 +3,8 @@ import "../pulsesProductList/style.scss";
 import {
   productList2,
   productListHeading2,
-} from "../pulsesProductList/content";
-import { useAppContext } from "../../context";
+} from "../pulsesProductList/content";  // Make sure the path is correct
+import { useAppContext } from "../../context";  // Make sure the path is correct
 
 const SpicesProductCategory = () => {
   const { setRoute } = useAppContext();
@@ -17,13 +17,13 @@ const SpicesProductCategory = () => {
             <Col key={c.key} xs={24} sm={12} lg={6}>
               <div
                 className="product"
-                onClick={() => setRoute(`${c.buttonLink}`)}
+                onClick={() => c.inStock && setRoute(`${c.buttonLink}`)}
               >
-                <img src={c.productImg} alt="pulse" />
+                <img src={c.productImg} alt="spice" />
                 <h2>{c.name}</h2>
                 <p>Price - {c.price}</p>
-                <Button type="primary" className="primary_btn">
-                  {c.buttonText}
+                <Button type="primary" className="primary_btn" disabled={!c.inStock}>
+                  {c.inStock ? c.buttonText : "Out of Stock"}
                 </Button>
               </div>
             </Col>

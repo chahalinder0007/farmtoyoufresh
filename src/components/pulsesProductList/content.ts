@@ -7,6 +7,7 @@ export const productList = [
     price: "20.00/-",
     buttonText: "Buy Now",
     buttonLink: "/",
+    inStock: false,
   },
   {
     key: "2",
@@ -15,6 +16,7 @@ export const productList = [
     price: "20.00/-",
     buttonText: "Buy Now",
     buttonLink: "/",
+    inStock: false,
   },
   {
     key: "3",
@@ -23,6 +25,7 @@ export const productList = [
     price: "20.00/-",
     buttonText: "Buy Now",
     buttonLink: "/",
+    inStock: false,
   },
   {
     key: "4",
@@ -31,6 +34,7 @@ export const productList = [
     price: "20.00/-",
     buttonText: "Buy Now",
     buttonLink: "/",
+    inStock: false,
   },
 ];
 
@@ -43,6 +47,7 @@ export const productList2 = [
     price: "20.00/-",
     buttonText: "Buy Now",
     buttonLink: "/",
+    inStock: false,
   },
   {
     key: "2",
@@ -51,6 +56,7 @@ export const productList2 = [
     price: "20.00/-",
     buttonText: "Buy Now",
     buttonLink: "/",
+    inStock: false,
   },
   {
     key: "3",
@@ -59,6 +65,7 @@ export const productList2 = [
     price: "20.00/-",
     buttonText: "Buy Now",
     buttonLink: "/",
+    inStock: false,
   },
   {
     key: "4",
@@ -67,5 +74,6 @@ export const productList2 = [
     price: "20.00/-",
     buttonText: "Buy Now",
     buttonLink: "/",
+    inStock: false,
   },
 ];

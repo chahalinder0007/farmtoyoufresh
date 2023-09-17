@@ -1,7 +1,7 @@
+import React from 'react';
 import { Button, Col, Row } from "antd";
-import "./style.scss";
-import { productList, productListHeading1 } from "./content";
-import { useAppContext } from "../../context";
+import { productList, productListHeading1 } from "./content";  // Make sure the path is correct
+import { useAppContext } from "../../context";  // Make sure the path is correct
 
 const PulsesProductCategory = () => {
   const { setRoute } = useAppContext();
@@ -14,13 +14,13 @@ const PulsesProductCategory = () => {
             <Col key={c.key} xs={24} sm={12} lg={6}>
               <div
                 className="product"
-                onClick={() => setRoute(`${c.buttonLink}`)}
+                onClick={() => c.inStock && setRoute(`${c.buttonLink}`)}
               >
                 <img src={c.productImg} alt="pulse" />
                 <h2>{c.name}</h2>
                 <p>Price - {c.price}</p>
-                <Button type="primary" className="primary_btn">
-                  {c.buttonText}
+                <Button type="primary" className="primary_btn" disabled={!c.inStock}>
+                  {c.inStock ? c.buttonText : "Out of Stock"}
                 </Button>
               </div>
             </Col>

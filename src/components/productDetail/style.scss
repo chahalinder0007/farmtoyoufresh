@@ -1,0 +1,24 @@
+@import "../../variables.scss";
+
+.productBlock {
+  margin: 50px 0;
+  .productImg {
+    padding: 15px;
+    box-shadow: 0px 0px 10px #ddd;
+    border-radius: 5px;
+    img {
+      width: 100%;
+    }
+  }
+  .productInfo {
+    h1 {
+      margin: 0 0 5px;
+      font-size: 25px;
+    }
+    h2 {
+      color: $green-color;
+      margin-top: 0;
+      font-size: 22px;
+    }
+  }
+}

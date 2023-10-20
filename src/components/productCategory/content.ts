@@ -1,16 +1,16 @@
 export const productCategories = [
   {
     key: "1",
-    title: "Organic Pulses",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, It has survived not only five centuries.",
+    title: "Organic Pulses: Elevate Your Meals Naturally",
+    text: "Farm You Fresh brings you organic pulses, grown with love and free from chemicals. Packed with nutrients, our pulses are a promise of quality and health, from our family to yours.",
     buttonText: "View Products",
     buttonLink: "about",
     backgroundImg: "./images/organic-pulses.png",
   },
   {
     key: "2",
-    title: "Organic Spices",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, It has survived not only five centuries.",
+    title: "Organic Spices: Pure Goodness in Every Bite",
+    text: "Experience the true essence of flavors with Farm You Fresh Organic Spices. Handpicked and processed without chemicals, our spices are a dash of health in every pinch.",
     buttonText: "View Products",
     buttonLink: "about",
     backgroundImg: "./images/organic-spices.png",

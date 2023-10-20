@@ -29,4 +29,13 @@ export const list = [
     buttonLink: "blogContent",
     fileName: "blog3",
   },
+  {
+    key: "4",
+    img: "./images/blogs/blog_4/first_image.png",
+    date: "October 21, 2023",
+    title: "Turmeric Powder: Known for its antioxidant, anti-inflammatory, and antiseptic properties",
+    buttonText: "Read more",
+    buttonLink: "blogContent",
+    fileName: "blog4",
+  },
 ];

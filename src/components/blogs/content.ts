@@ -38,4 +38,13 @@ export const list = [
     buttonLink: "blogContent",
     fileName: "blog4",
   },
+  {
+    key: "4",
+    img: "./images/blogs/blog_5/image1.png",
+    date: "October 30, 2023",
+    title: "The Power of Farm-Fresh: Anti-oxidant and Anti-inflammatory Benefits",
+    buttonText: "Read more",
+    buttonLink: "blogContent",
+    fileName: "blog5",
+  },
 ];

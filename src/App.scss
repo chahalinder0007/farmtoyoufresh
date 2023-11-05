@@ -46,18 +46,3 @@ p {
     background: $green-color;
   }
 }
-
-.slick-prev,
-.slick-next {
-  bottom: -30px;
-  top: auto;
-  &::before {
-    color: #000000;
-  }
-}
-.slick-prev {
-  left: 0;
-}
-.slick-next {
-  left: 25px;
-}

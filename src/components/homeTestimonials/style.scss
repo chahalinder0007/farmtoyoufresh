@@ -22,14 +22,37 @@
     }
   }
   p {
-    color: $paraghraph-color;
+    color: $paraghraph-color2;
     line-height: 25px;
     text-align: justify;
-    margin-top: 50px;
+    margin-top: 0;
+    font-style: italic;
   }
   h2 {
     font-size: 17px;
   }
+  .slick-slider {
+    margin-top: 50px;
+    padding: 15px 15px 30px;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 1px 19px rgba($color: #000000, $alpha: 0.2);
+  }
+}
+
+.slick-prev,
+.slick-next {
+  bottom: -6px;
+  top: auto;
+  &::before {
+    color: #000000;
+  }
+}
+.slick-prev {
+  left: 15px;
+}
+.slick-next {
+  left: 38px;
 }
 
 @media screen and (max-width: 767px) {

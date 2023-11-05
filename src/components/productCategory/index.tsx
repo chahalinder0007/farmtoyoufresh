@@ -20,6 +20,7 @@ const ProductCategory = () => {
                   onClick={() => setRoute(`${c.buttonLink}`)}
                 >
                   <h2>{c.title}</h2>
+                  <h3>{c.subHeading}</h3>
                   <p>{c.text}</p>
                   <Button type="primary" className="primary_btn">
                     {c.buttonText}

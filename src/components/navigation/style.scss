@@ -2,9 +2,18 @@
 
 .nav {
   border-bottom: none;
+  list-style: none;
+  display: flex;
+  column-gap: 20px;
   li {
     text-transform: uppercase;
     font-weight: bold;
+    a {
+      color: rgba(0, 0, 0, 0.88);
+      &:hover {
+        color: #0e9210;
+      }
+    }
   }
 }
 .ant-menu.ant-menu-horizontal {

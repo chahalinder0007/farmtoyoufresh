@@ -1,27 +1,27 @@
-import type { MenuProps } from "antd";
-export const items: MenuProps["items"] = [
+// import type { MenuProps } from "antd";
+export const items = [
   {
     label: "Home",
     key: "/",
   },
   {
     label: "Products",
-    key: "products",
+    key: "#/products",
   },
   {
     label: "About Us",
-    key: "about",
+    key: "#/about",
   },
   {
     label: "Blogs",
-    key: "blogs",
+    key: "#/blogs",
   },
   {
     label: "Testimonial",
-    key: "testimonials",
+    key: "#/testimonials",
   },
   {
     label: "Contact Us",
-    key: "contact",
+    key: "#/contact",
   },
 ];

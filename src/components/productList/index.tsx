@@ -47,11 +47,11 @@ const ProductList: React.FC<pulsesPropsType> = (props) => {
         {products.map((c) => {
           return (
             <Col key={c.key} xs={24} sm={12} lg={6}>
-              <div
+              <a
                 className="product"
+                href={`${c.buttonLink}`}
                 onClick={() => {
                   if (c.inStock) {
-                    setRoute(`${c.buttonLink}`);
                     setProductInfo(c);
                   }
                 }}
@@ -66,7 +66,7 @@ const ProductList: React.FC<pulsesPropsType> = (props) => {
                 >
                   {c.inStock ? c.buttonText : "Out of Stock"}
                 </Button>
-              </div>
+              </a>
             </Col>
           );
         })}

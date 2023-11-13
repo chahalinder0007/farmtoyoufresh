@@ -57,11 +57,12 @@ const Products: React.FC<productPropsType> = (props: any) => {
         {list.map((c) => {
           return (
             <Col key={c.key} xs={24} sm={12} lg={6}>
-              <div
+              <a
                 className="product"
+                href={`${c.buttonLink}`}
                 onClick={() => {
                   if (c.inStock) {
-                    setRoute(`${c.buttonLink}`);
+                    // setRoute(`${c.buttonLink}`);
                     setProductInfo(c);
                   }
                 }}
@@ -76,7 +77,7 @@ const Products: React.FC<productPropsType> = (props: any) => {
                 >
                   {c.inStock ? c.buttonText : "Out of Stock"}
                 </Button>
-              </div>
+              </a>
             </Col>
           );
         })}

@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Col, Row } from "antd";
 import "./style.scss";
-import { useAppContext } from "../../context";
+// import { useAppContext } from "../../context";
 import { headerImg, list, pageHeading } from "./content";
 import HeaderInnerPages from "../headerInnerPages";
 import { RightOutlined, CalendarOutlined } from "@ant-design/icons";
@@ -11,7 +11,7 @@ interface BlogsProps {
 }
 
 const Blogs: React.FC<BlogsProps> = (props) => {
-  const { setRoute } = useAppContext();
+  // const { setRoute } = useAppContext();
   const { setFileName } = props;
   return (
     <>
@@ -22,10 +22,10 @@ const Blogs: React.FC<BlogsProps> = (props) => {
             {list.map((c) => {
               return (
                 <Col key={c.key} xs={24} sm={12} lg={8}>
-                  <div
+                  <a
                     className="blog"
+                    href={`${c.buttonLink}`}
                     onClick={() => {
-                      setRoute(`${c.buttonLink}`);
                       setFileName(`${c.fileName}`);
                     }}
                   >
@@ -45,7 +45,7 @@ const Blogs: React.FC<BlogsProps> = (props) => {
                         </div> */}
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </Col>
               );
             })}

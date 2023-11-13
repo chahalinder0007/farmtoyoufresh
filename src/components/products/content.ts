@@ -8,7 +8,7 @@ export const productList = [
     name: "Arhar Dal",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: false,
@@ -20,7 +20,7 @@ export const productList = [
     name: "Mung Bean",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: false,
@@ -32,7 +32,7 @@ export const productList = [
     name: "Lentil Pulse",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: false,
@@ -44,7 +44,7 @@ export const productList = [
     name: "Horse Gram",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: false,
@@ -56,7 +56,7 @@ export const productList = [
     name: "Arhar Dal",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,
@@ -68,7 +68,7 @@ export const productList = [
     name: "Mung Bean",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,
@@ -80,7 +80,7 @@ export const productList = [
     name: "Lentil Pulse",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,
@@ -92,7 +92,7 @@ export const productList = [
     name: "Horse Gram",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,
@@ -104,7 +104,7 @@ export const productList = [
     name: "Arhar Dal",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,
@@ -116,7 +116,7 @@ export const productList = [
     name: "Mung Bean",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,
@@ -128,7 +128,7 @@ export const productList = [
     name: "Lentil Pulse",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,
@@ -140,7 +140,7 @@ export const productList = [
     name: "Horse Gram",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,
@@ -152,7 +152,7 @@ export const productList = [
     name: "Garam Masala",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: false,
@@ -164,7 +164,7 @@ export const productList = [
     name: "Turmeric",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: false,
@@ -176,7 +176,7 @@ export const productList = [
     name: "Red chilli",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: false,
@@ -188,7 +188,7 @@ export const productList = [
     name: "Black Cardamom",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: false,
@@ -200,7 +200,7 @@ export const productList = [
     name: "Garam Masala",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,
@@ -212,7 +212,7 @@ export const productList = [
     name: "Turmeric",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,
@@ -224,7 +224,7 @@ export const productList = [
     name: "Red chilli",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,
@@ -236,7 +236,7 @@ export const productList = [
     name: "Black Cardamom",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,
@@ -248,7 +248,7 @@ export const productList = [
     name: "Garam Masala",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,
@@ -260,7 +260,7 @@ export const productList = [
     name: "Turmeric",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,
@@ -272,7 +272,7 @@ export const productList = [
     name: "Red chilli",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,
@@ -284,7 +284,7 @@ export const productList = [
     name: "Black Cardamom",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,
@@ -296,7 +296,7 @@ export const productList = [
     name: "Garam Masala",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,
@@ -308,7 +308,7 @@ export const productList = [
     name: "Turmeric",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,
@@ -320,7 +320,7 @@ export const productList = [
     name: "Red chilli",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,
@@ -332,7 +332,7 @@ export const productList = [
     name: "Black Cardamom",
     price: "20.00/-",
     buttonText: "Buy Now",
-    buttonLink: "productDetail",
+    buttonLink: "#/productDetail",
     description:
       "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
     inStock: true,

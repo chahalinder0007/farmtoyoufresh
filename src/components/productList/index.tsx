@@ -17,13 +17,12 @@ interface productListTypes {
 }
 
 interface pulsesPropsType {
-  setProductInfo: (productInfo: productListTypes) => void;
   pageHeading: string;
   category: string;
 }
 
 const ProductList: React.FC<pulsesPropsType> = (props) => {
-  const { setProductInfo, pageHeading, category } = props;
+  const { pageHeading, category } = props;
   const [products, setProducts] = useState<productListTypes[]>([]);
   useEffect(() => {
     if (productList.length) {
@@ -37,7 +36,7 @@ const ProductList: React.FC<pulsesPropsType> = (props) => {
         setProducts(productCat.slice(0, 4));
       }
     }
-  }, []);
+  }, [category]);
   return (
     <div className="container">
       <h1>{pageHeading}</h1>
@@ -45,16 +44,8 @@ const ProductList: React.FC<pulsesPropsType> = (props) => {
         {products.map((c) => {
           return (
             <Col key={c.key} xs={24} sm={12} lg={6}>
-              <a
-                className="product"
-                href={`${c.buttonLink}`}
-                onClick={() => {
-                  if (c.inStock) {
-                    setProductInfo(c);
-                  }
-                }}
-              >
-                <img src={c.productImg} alt="pulse" />
+              <a className="product" href={`${c.buttonLink}`}>
+                <img src={c.productImg} alt={c.type} />
                 <h2>{c.name}</h2>
                 <p>Price - {c.price}</p>
                 <Button

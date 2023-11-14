@@ -2,12 +2,9 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./style.scss";
-import { Button } from "antd";
-import { useAppContext } from "../../context";
 import { slides } from "./content";
 
 const HomeSlider: React.FC = () => {
-  const { setRoute } = useAppContext();
   return (
     <Carousel
       autoPlay={true}
@@ -23,13 +20,13 @@ const HomeSlider: React.FC = () => {
                 <h1 style={{ color: `${c.h1Color}` }}>{c.h1}</h1>
                 <h2 style={{ color: `${c.h2Color}` }}>{c.h2}</h2>
                 <p style={{ color: `${c.textColor}` }}>{c.text}</p>
-                <Button
+                <a
                   type="primary"
-                  className="primary-btn"
-                  onClick={() => setRoute(`${c.buttonLink}`)}
+                  className="primary_btn"
+                  href={`${c.buttonLink}`}
                 >
                   {c.buttonText}
-                </Button>
+                </a>
               </div>
             </div>
             <img src={c.image} alt="slider" />

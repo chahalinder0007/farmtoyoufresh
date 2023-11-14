@@ -1,10 +1,8 @@
 import { Button, Col, Row } from "antd";
 import "./style.scss";
 import { productCategories } from "./content";
-import { useAppContext } from "../../context";
 
 const ProductCategory = () => {
-  const { setRoute } = useAppContext();
   return (
     <div className="container">
       <div className="productCat">
@@ -12,12 +10,12 @@ const ProductCategory = () => {
           {productCategories.map((c) => {
             return (
               <Col key={c.key} xs={24} sm={12} lg={12}>
-                <div
+                <a
                   className="category"
                   style={{
                     backgroundImage: `url("${c.backgroundImg}")`,
                   }}
-                  onClick={() => setRoute(`${c.buttonLink}`)}
+                  href={`${c.buttonLink}`}
                 >
                   <h2>{c.title}</h2>
                   <h3>{c.subHeading}</h3>
@@ -25,7 +23,7 @@ const ProductCategory = () => {
                   <Button type="primary" className="primary_btn">
                     {c.buttonText}
                   </Button>
-                </div>
+                </a>
               </Col>
             );
           })}

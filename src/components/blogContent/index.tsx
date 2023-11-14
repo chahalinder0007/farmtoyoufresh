@@ -5,22 +5,21 @@ import { headerImg, pageHeading } from "./content";
 import HeaderInnerPages from "../headerInnerPages";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
+import { useLocation } from "react-router-dom";
 
-interface BlogContentProps {
-  fileName: string;
-}
-
-const BlogContent: React.FC<BlogContentProps> = (props) => {
+const BlogContent: React.FC = () => {
+  const location = useLocation();
   const [text, setText] = useState("");
-  const { fileName } = props;
 
   useEffect(() => {
+    const queryParams = new URLSearchParams(location?.search);
+    const fileName = queryParams.get("name");
     axios
       .get(`/content/${fileName}.md`, { responseType: "text" })
       .then((res) => {
         setText(res.data);
       });
-  }, []);
+  }, [location?.search]);
 
   return (
     <>

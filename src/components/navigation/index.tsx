@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import "./style.scss";
 import { items } from "./content";
+import { useAppContext } from "../../context";
 
 const Navigation: React.FC = () => {
-  const [currentPageName, setCurrentPageName] = useState("Home");
+  const { currentPageName, setCurrentPageName } = useAppContext();
   const [toggleMenu, setToggleMenu] = useState(false);
   const handleNavClick = (currentPage: any) => {
     setCurrentPageName(currentPage);
   };
+
   return (
     <>
       <div className="navWrapper">
@@ -25,6 +27,7 @@ const Navigation: React.FC = () => {
           {items?.map((item) => {
             return (
               <li
+                key={item?.key}
                 className={currentPageName === item?.label ? "selected" : ""}
                 onClick={() => {
                   setToggleMenu(!toggleMenu);

@@ -8,21 +8,25 @@
     background-size: cover;
     background-position: 0 0;
     background-repeat: no-repeat;
+    display: block;
     h2 {
       margin: 0;
       width: 60%;
       text-transform: uppercase;
       font-size: 23px;
+      color: black;
     }
     h3 {
       margin: 3px 0 0;
       font-size: 16px;
+      color: black;
     }
     p {
       width: 60%;
       margin: 20px 0 25px;
       text-align: justify;
       line-height: 22px;
+      color: black;
     }
   }
 }

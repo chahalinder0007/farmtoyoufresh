@@ -1,15 +1,17 @@
 import React, { createContext, useContext, useState } from "react";
 
 interface ContextProps {
-  route: string;
-  setRoute: (route: string) => void;
+  currentPageName: string;
+  setCurrentPageName: (currentPageName: string) => void;
 }
 const Context = createContext<ContextProps | undefined>(undefined);
 
 const ContextProvider: React.FC<any> = ({ children }) => {
-  const [route, setRoute] = useState("/");
+  const [currentPageName, setCurrentPageName] = useState("Home");
   return (
-    <Context.Provider value={{ route, setRoute }}>{children}</Context.Provider>
+    <Context.Provider value={{ currentPageName, setCurrentPageName }}>
+      {children}
+    </Context.Provider>
   );
 };
 

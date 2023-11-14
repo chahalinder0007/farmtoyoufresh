@@ -8,8 +8,7 @@ export const list = [
     date: "August 21, 2023",
     title: "Health Benifits of Turmeric",
     buttonText: "Read more",
-    buttonLink: "#/blogContent",
-    fileName: "blog1",
+    buttonLink: "#/blogContent?name=blog1",
   },
   {
     key: "2",
@@ -18,8 +17,7 @@ export const list = [
     title:
       "THE UNSEEN CONNECTION BETWEEN SHAHRUKH KHAN'S 'JAWAN' AND ORGANIC TURMERIC POWDER",
     buttonText: "Read more",
-    buttonLink: "#/blogContent",
-    fileName: "blog2",
+    buttonLink: "#/blogContent?name=blog2",
   },
   {
     key: "3",
@@ -28,8 +26,7 @@ export const list = [
     title:
       "The Golden Debate: Sun-Dried vs Boiled vs Artificially Baked Turmeric Powder",
     buttonText: "Read more",
-    buttonLink: "#/blogContent",
-    fileName: "blog3",
+    buttonLink: "#/blogContent?name=blog3",
   },
   {
     key: "4",
@@ -38,8 +35,7 @@ export const list = [
     title:
       "Turmeric Powder: Known for its antioxidant, anti-inflammatory, and antiseptic properties",
     buttonText: "Read more",
-    buttonLink: "#/blogContent",
-    fileName: "blog4",
+    buttonLink: "#/blogContent?name=blog4",
   },
   {
     key: "5",
@@ -48,8 +44,7 @@ export const list = [
     title:
       "The Power of Farm-Fresh: Anti-oxidant and Anti-inflammatory Benefits",
     buttonText: "Read more",
-    buttonLink: "#/blogContent",
-    fileName: "blog5",
+    buttonLink: "#/blogContent?name=blog5",
   },
   {
     key: "6",
@@ -58,7 +53,6 @@ export const list = [
     title:
       "Discover the Healing Power of Nature: Antioxidants and Anti-Inflammatories at Your Table",
     buttonText: "Read more",
-    buttonLink: "#/blogContent",
-    fileName: "blog6",
+    buttonLink: "#/blogContent?name=blog6",
   },
 ];

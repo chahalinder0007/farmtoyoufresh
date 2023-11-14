@@ -10,7 +10,7 @@ export const slides = [
     text: "",
     textColor: "#000000",
     buttonText: "View Products",
-    buttonLink: "products",
+    buttonLink: "#/products",
   },
   {
     key: "2",
@@ -23,7 +23,7 @@ export const slides = [
     text: "",
     textColor: "#000000",
     buttonText: "View Products",
-    buttonLink: "products",
+    buttonLink: "#/products",
   },
   {
     key: "3",
@@ -36,6 +36,6 @@ export const slides = [
     text: "Assured Quality Every Time",
     textColor: "#000000",
     buttonText: "View Products",
-    buttonLink: "products",
+    buttonLink: "#/products",
   },
 ];

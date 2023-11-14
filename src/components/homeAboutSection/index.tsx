@@ -1,10 +1,10 @@
-import { Button, Col, Row } from "antd";
+import { Col, Row } from "antd";
 import "./style.scss";
-import { useAppContext } from "../../context";
 import { homeAboutContent } from "./content";
+import { useAppContext } from "../../context";
 
 const HomeAboutSection = () => {
-  const { setRoute } = useAppContext();
+  const { setCurrentPageName } = useAppContext();
   return (
     <div className="container homeAboutContent">
       <Row justify="center" align="middle" gutter={50}>
@@ -15,12 +15,13 @@ const HomeAboutSection = () => {
             </h4>
             <h2>{homeAboutContent.mainTitle}</h2>
             <p>{homeAboutContent.aboutText}</p>
-            <Button
-              onClick={() => setRoute(`${homeAboutContent.buttonLink}`)}
+            <a
+              onClick={() => setCurrentPageName("About Us")}
+              href={`#/${homeAboutContent.buttonLink}`}
               className="primary_btn"
             >
               {homeAboutContent.buttonText}
-            </Button>
+            </a>
           </div>
         </Col>
         <Col xs={24} lg={12}>

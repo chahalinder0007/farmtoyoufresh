@@ -1,18 +1,11 @@
 import React from "react";
 import { Button, Col, Row } from "antd";
 import "./style.scss";
-// import { useAppContext } from "../../context";
 import { headerImg, list, pageHeading } from "./content";
 import HeaderInnerPages from "../headerInnerPages";
 import { RightOutlined, CalendarOutlined } from "@ant-design/icons";
 
-interface BlogsProps {
-  setFileName: (fileName: string) => void;
-}
-
-const Blogs: React.FC<BlogsProps> = (props) => {
-  // const { setRoute } = useAppContext();
-  const { setFileName } = props;
+const Blogs: React.FC = () => {
   return (
     <>
       <HeaderInnerPages pageHeading={pageHeading} headerImg={headerImg} />
@@ -22,13 +15,7 @@ const Blogs: React.FC<BlogsProps> = (props) => {
             {list.map((c) => {
               return (
                 <Col key={c.key} xs={24} sm={12} lg={8}>
-                  <a
-                    className="blog"
-                    href={`${c.buttonLink}`}
-                    onClick={() => {
-                      setFileName(`${c.fileName}`);
-                    }}
-                  >
+                  <a className="blog" href={`${c.buttonLink}`}>
                     <img src={c.img} alt="" />
                     <div className="blogContent">
                       <p>

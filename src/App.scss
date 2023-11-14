@@ -41,6 +41,8 @@ p {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  text-decoration: none;
+
   &:hover:not(:disabled):not(.ant-btn-disabled) {
     color: #ffffff;
     background: $green-color;

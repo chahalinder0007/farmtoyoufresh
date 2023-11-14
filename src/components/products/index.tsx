@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { Button, Col, Row, Tabs } from "antd";
 import type { TabsProps } from "antd";
@@ -7,6 +8,8 @@ import {
   productListHeading1,
   productListHeading2,
 } from "./content";
+import { useLocation } from "react-router-dom";
+import { useAppContext } from "../../context";
 
 interface productListTypes {
   key: string;
@@ -20,17 +23,17 @@ interface productListTypes {
   inStock: boolean;
 }
 
-interface productPropsType {
-  setProductInfo: (productInfo: productListTypes) => void;
-}
-
-const Products: React.FC<productPropsType> = (props: any) => {
-  const { setProductInfo } = props;
+const Products: React.FC = () => {
+  const { setCurrentPageName } = useAppContext();
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location?.search);
+  const category = queryParams.get("productCategory") || "pulse";
   const [products, setProducts] = useState<productListTypes[]>([]);
 
   useEffect(() => {
-    getProducts("pulse");
-  }, []);
+    setCurrentPageName("Products");
+    getProducts(category);
+  }, [category]);
 
   const getProducts = (category: string) => {
     const productCat: productListTypes[] = [];
@@ -45,8 +48,7 @@ const Products: React.FC<productPropsType> = (props: any) => {
   };
 
   const onChange = (key: string) => {
-    const category = key === "1" ? "pulse" : "spice";
-    getProducts(category);
+    getProducts(key);
   };
 
   const getProductsList = (list: Array<productListTypes>) => {
@@ -55,16 +57,7 @@ const Products: React.FC<productPropsType> = (props: any) => {
         {list.map((c) => {
           return (
             <Col key={c.key} xs={24} sm={12} lg={6}>
-              <a
-                className="product"
-                href={`${c.buttonLink}`}
-                onClick={() => {
-                  if (c.inStock) {
-                    // setRoute(`${c.buttonLink}`);
-                    setProductInfo(c);
-                  }
-                }}
-              >
+              <a className="product" href={`${c.buttonLink}`}>
                 <img src={c.productImg} alt="pulse" />
                 <h2>{c.name}</h2>
                 <p>Price - {c.price}</p>
@@ -85,12 +78,12 @@ const Products: React.FC<productPropsType> = (props: any) => {
 
   const items: TabsProps["items"] = [
     {
-      key: "1",
+      key: "pulse",
       label: productListHeading1,
       children: <Row gutter={50}>{getProductsList(products)}</Row>,
     },
     {
-      key: "2",
+      key: "spice",
       label: productListHeading2,
       children: <Row gutter={50}>{getProductsList(products)}</Row>,
     },
@@ -100,7 +93,7 @@ const Products: React.FC<productPropsType> = (props: any) => {
     <div className="container">
       <h1>All Products</h1>
       <div className="productList products">
-        <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+        <Tabs defaultActiveKey={category} items={items} onChange={onChange} />
       </div>
     </div>
   );

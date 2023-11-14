@@ -7,6 +7,10 @@ import axios from "axios";
 import ReactMarkdown from "react-markdown";
 
 const About: React.FC = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
   const [text, setText] = useState("");
 
   useEffect(() => {
@@ -31,9 +35,9 @@ const About: React.FC = () => {
             </Col>
           </Row>
           <Row justify="center" align="middle" gutter={50}>
-            {options.map((c) => {
+            {options.map((c, i) => {
               return (
-                <Col xs={24} sm={12} lg={6}>
+                <Col xs={24} sm={12} lg={6} key={i}>
                   <div className="options">
                     <div className="optIcon">
                       <img src={c.icon} alt="" />

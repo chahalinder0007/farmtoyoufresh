@@ -1,4 +1,4 @@
-import { Button, Col, Row } from "antd";
+import { Col, Row } from "antd";
 import {
   HomeFilled,
   PhoneFilled,
@@ -11,7 +11,7 @@ import { about, contact, copyrightText } from "./content";
 import { useAppContext } from "../../context";
 
 const Footer = () => {
-  const { setRoute } = useAppContext();
+  const { setCurrentPageName } = useAppContext();
   return (
     <div className="footer">
       <div className="container footerTop">
@@ -19,12 +19,13 @@ const Footer = () => {
           <Col xs={24} lg={17} className="footerAboutus">
             <h2>{about.title}</h2>
             <p>{about.text}</p>
-            <Button
-              onClick={() => setRoute(`${about.buttonLink}`)}
+            <a
+              onClick={() => setCurrentPageName("About Us")}
+              href={"#/about"}
               className="readMoreBtn"
             >
               {about.buttonText}
-            </Button>
+            </a>
           </Col>
           <Col xs={24} lg={5}>
             <h2>{contact.title}</h2>

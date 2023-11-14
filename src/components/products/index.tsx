@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Button, Col, Row, Tabs } from "antd";
 import type { TabsProps } from "antd";
 import "./style.scss";
-import { useAppContext } from "../../context";
 import {
   productList,
   productListHeading1,
@@ -27,7 +26,6 @@ interface productPropsType {
 
 const Products: React.FC<productPropsType> = (props: any) => {
   const { setProductInfo } = props;
-  const { setRoute } = useAppContext();
   const [products, setProducts] = useState<productListTypes[]>([]);
 
   useEffect(() => {

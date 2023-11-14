@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { Button, Col, Row } from "antd";
-import { useAppContext } from "../../context"; // Make sure the path is correct
 import { productList } from "../products/content";
 import "./style.scss";
 
@@ -25,7 +24,6 @@ interface pulsesPropsType {
 
 const ProductList: React.FC<pulsesPropsType> = (props) => {
   const { setProductInfo, pageHeading, category } = props;
-  const { setRoute } = useAppContext();
   const [products, setProducts] = useState<productListTypes[]>([]);
   useEffect(() => {
     if (productList.length) {

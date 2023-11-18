@@ -55,4 +55,13 @@ export const list = [
     buttonText: "Read more",
     buttonLink: "#/blogContent?name=blog6",
   },
+  {
+    key: "7",
+    img: "./images/blogs/blog_7/image1.png",
+    date: "November 19, 2023",
+    title:
+      "Embracing Nature's Bounty: The Organic Way to Wellness",
+    buttonText: "Read more",
+    buttonLink: "#/blogContent?name=blog7",
+  },
 ];

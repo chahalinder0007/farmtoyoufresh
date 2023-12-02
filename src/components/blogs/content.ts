@@ -64,4 +64,13 @@ export const list = [
     buttonText: "Read more",
     buttonLink: "#/blogContent?name=blog7",
   },
+  {
+    key: "8",
+    img: "./images/blogs/blog_8/image1.png",
+    date: "December 3, 2023",
+    title:
+      "The Journey from Seed to Table: Savoring the Essence of Pure Farming",
+    buttonText: "Read more",
+    buttonLink: "#/blogContent?name=blog8",
+  },
 ];

@@ -73,4 +73,13 @@ export const list = [
     buttonText: "Read more",
     buttonLink: "#/blogContent?name=blog8",
   },
+  {
+    key: "9",
+    img: "./images/blogs/blog_9/image1.png",
+    date: "December 17, 2023",
+    title:
+      "From Our Soil to Your Soul: The Journey of Every Bite",
+    buttonText: "Read more",
+    buttonLink: "#/blogContent?name=blog9",
+  },
 ];

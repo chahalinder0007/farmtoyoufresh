@@ -47,11 +47,6 @@ jobs:
       - name: Create CNAME file
         run: echo "farmtoyoufresh.com" > CNAME
 
-      - name: Set up Git user information
-        run: |
-          git config user.name "chahalinder0007"
-          git config user.email "chahal.inder0007@gmail.com"
-
       - name: Commit and push changes
         run: |
           git add CNAME

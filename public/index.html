@@ -40,19 +40,38 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-772YRVP6KQ"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("ichahal_page", new Date())
+   <script>
+      document.addEventListener('mousemove', (event) => {
+        // Extract relevant information from the mouse event
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+    
+        // Send mouse movement data to Google Analytics
+        gtag('event', 'mouse_movement', {
+          'event_category': 'Engagement',
+          'event_label': 'Mouse Movement',
+          'value': 1,
+          'mouse_x': mouseX,
+          'mouse_y': mouseY,
+          'screen_width': screenWidth,
+          'screen_height': screenHeight,
+        });
+      });
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-772YRVP6KQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    gtag("config", "G-772YRVP6KQ");
-  </script>
+      gtag('config', 'G-772YRVP6KQ');
+    </script>
+    
+    <!-- End of Google tag (gtag.js) -->
+
+
+
 </html>

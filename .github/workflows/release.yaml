@@ -8,35 +8,35 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          ref: main
-          token: ${{ secrets.GH_TOKEN }}
-
-      - name: Set up Git user information
-        run: |
-          git config --global user.name "chahalinder0007"
-          git config --global user.email "chahal.inder0007@gmail.com"
-
-      - name: Authenticate GitHub CLI
-        run: echo "${{ secrets.GH_TOKEN }}" | gh auth login --with-token
+          node-version: '18' 
 
       - name: Install dependencies
-        run: npm i
+        run: npm ci
 
-      - name: Run deploy script
-        run: npm run deploy
+      - name: Build
+        run: npm run build
 
-      - name: Wait for 30 seconds
-        run: sleep 120s
-
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
+          branch: gh-pages
+          token: ${{ secrets.GH_TOKEN }}
+          
   update-gh-pages:
     needs: deploy
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
       - name: Checkout gh-pages branch
         uses: actions/checkout@v3
@@ -49,12 +49,11 @@ jobs:
 
       - name: Set up Git user information
         run: |
-          git config --global user.name "chahalinder0007"
-          git config --global user.email "chahal.inder0007@gmail.com"
+          git config user.name "chahalinder0007"
+          git config user.email "chahal.inder0007@gmail.com"
 
       - name: Commit and push changes
         run: |
           git add CNAME
           git commit -m "Add CNAME file"
           git push origin gh-pages
-

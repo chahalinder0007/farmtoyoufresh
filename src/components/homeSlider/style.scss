@@ -1,107 +1,221 @@
+@import "../../variables.scss";
+
 .carousel .slide {
   text-align: left;
+  background: $emerald-900;
 }
+
 .slider {
   li {
-    height: 588px;
-    background: gray;
     position: relative;
+    height: 624px;
+    overflow: hidden;
+    background: $emerald-900;
+
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    // emerald legibility scrim
+    .centerText,
+    .sideContext {
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+      }
+    }
+    .sideContext::before {
+      background: linear-gradient(
+        100deg,
+        rgba($emerald-900, 0.93) 0%,
+        rgba($emerald-900, 0.6) 38%,
+        rgba($emerald-900, 0.14) 66%,
+        rgba($emerald-900, 0) 82%
+      );
+    }
+    .centerText::before {
+      background: linear-gradient(
+        180deg,
+        rgba($emerald-900, 0.58) 0%,
+        rgba($emerald-900, 0.3) 45%,
+        rgba($emerald-900, 0.8) 100%
+      );
+    }
+
+    // gold jali lattice, fading across the frame
+    .heroJali {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      opacity: 0.18;
+      @include jali;
+      -webkit-mask-image: linear-gradient(
+        100deg,
+        #000 0%,
+        rgba(0, 0, 0, 0.5) 44%,
+        transparent 72%
+      );
+      mask-image: linear-gradient(
+        100deg,
+        #000 0%,
+        rgba(0, 0, 0, 0.5) 44%,
+        transparent 72%
+      );
+    }
+
     .slideContent {
       position: absolute;
+      inset: 0;
+      z-index: 3;
       width: 100%;
       padding: 0 15px;
-    }
-    .centerText {
       display: flex;
-      align-items: center;
-      .slideContent {
-        display: inline-flex;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        h1 {
-          color: #ffffff;
-          font-size: 65px;
-          margin-bottom: 20px;
-          margin-top: 0;
-        }
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .heroKicker {
+      margin-bottom: 20px;
+      .deva {
+        color: $gold-200;
+        font-size: 19px;
+        letter-spacing: 0.1em;
       }
     }
-    .sideContext {
-      display: flex;
-      align-items: center;
+
+    h1,
+    h2 {
+      color: $ivory;
+    }
+
+    .centerText {
+      .slideContent {
+        align-items: center;
+        text-align: center;
+      }
       h1 {
-        margin-bottom: 5px;
-        margin-top: 0;
-        font-size: 60px;
+        font-size: 86px;
+        line-height: 1;
+        margin: 0 0 24px;
+        font-weight: 600;
+      }
+    }
+
+    .sideContext {
+      .slideContent {
+        align-items: flex-start;
+      }
+      h1 {
+        font-size: 78px;
+        line-height: 1;
+        margin: 0 0 6px;
+        font-weight: 600;
       }
       h2 {
-        margin-top: 0;
-        margin-bottom: 15px;
-        font-size: 38px;
+        font-size: 40px;
+        font-weight: 500;
+        font-style: italic;
+        margin: 0 0 20px;
+        color: rgba($ivory, 0.92);
       }
       p {
-        font-size: 20px;
-        margin-bottom: 25px;
-        margin-top: 0;
+        font-family: $font-serif-alt;
+        color: $gold-200;
+        font-size: 14px;
+        letter-spacing: 0.24em;
         text-transform: uppercase;
+        margin: 0 0 32px;
       }
+    }
+  }
+
+  // gold-foil hero CTA
+  .primary_btn {
+    background: $gold-grad;
+    color: $emerald-900;
+    border: 1px solid rgba(#ffffff, 0.4);
+    font-weight: 700;
+    box-shadow: $shadow-gold;
+    &:hover:not(:disabled) {
+      color: $emerald-900;
+      background: $gold-grad;
+      border-color: #ffffff;
+      box-shadow: 0 18px 40px rgba($gold-500, 0.5);
+    }
+  }
+}
+
+.carousel .control-dots {
+  margin: 0 0 26px;
+  .dot {
+    width: 8px;
+    height: 8px;
+    background: rgba($gold-200, 0.5);
+    box-shadow: none;
+    opacity: 1;
+    transition: width 0.3s $ease, background 0.3s $ease;
+    &.selected,
+    &:hover {
+      background: $gold-400;
+    }
+    &.selected {
+      width: 26px;
+      border-radius: 4px;
     }
   }
 }
 
 @media screen and (max-width: 1200px) {
-  .carousel .slide {
-    img {
-      height: auto;
+  .slider li {
+    height: 480px;
+    .centerText h1 {
+      font-size: 58px;
     }
-  }
-  .slider {
-    li {
-      height: 403px;
-      .centerText .slideContent {
-        h1 {
-          font-size: 45px;
-        }
+    .sideContext {
+      h1 {
+        font-size: 54px;
       }
-      .sideContext {
-        h1 {
-          font-size: 60px;
-        }
-        h2 {
-          font-size: 38px;
-        }
-        p {
-          font-size: 20px;
-        }
+      h2 {
+        font-size: 30px;
       }
+    }
+    .heroKicker .deva {
+      font-size: 16px;
     }
   }
 }
+
 @media screen and (max-width: 767px) {
-  .carousel .slide {
-    img {
-      height: 195px;
-    }
-  }
-  .slider {
-    li {
-      height: 195px;
-      .centerText .slideContent {
-        h1 {
-          font-size: 35px;
-        }
+  .slider li {
+    height: 470px;
+    .heroKicker {
+      margin-bottom: 12px;
+      .deva {
+        font-size: 14px;
       }
-      .sideContext {
-        h1 {
-          font-size: 30px;
-        }
-        h2 {
-          font-size: 25px;
-        }
-        p {
-          font-size: 15px;
-        }
+    }
+    .centerText h1 {
+      font-size: 40px;
+      margin-bottom: 18px;
+    }
+    .sideContext {
+      h1 {
+        font-size: 38px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 12px;
+        margin-bottom: 24px;
       }
     }
   }

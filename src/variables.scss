@@ -1,6 +1,124 @@
-$primary-color: #000000;
-$green-color: #0e9210;
-$orange-color: #fe6a24;
-$paraghraph-color: #7b7b7b;
-$paraghraph-color2: #393939;
-$yellow-color: #f4b222;
+// ============================================================
+//  Farm To You Fresh — "Heritage Luxe" design tokens
+//  A premium, India-rooted system: emerald + antique gold +
+//  Banarasi maroon on warm ivory. Re-skin the whole site from
+//  this one file; every component consumes these names.
+// ============================================================
+
+// — Jewel greens ————————————————————————————————————————————
+$emerald-900: #0b2a20; // near-black emerald — deepest chrome
+$emerald-800: #0f3527; // deep emerald — header/footer/hero bands
+$emerald-700: #15533b; // emerald — links, prices, accents
+$emerald-500: #2f7d57; // brighter emerald — hovers, highlights
+$emerald-100: #dde9df; // pale green wash — tints
+
+// — Antique gold (the metallic signature) ————————————————————
+$gold-700: #8a6a2c; // deep gold — bold labels on ivory
+$gold-500: #b08d3e; // antique gold — primary metallic accent
+$gold-400: #c9a44c; // bright gold
+$gold-200: #e7d2a0; // pale gold — text/lines on dark
+$gold-grad: linear-gradient(135deg, #ecd69e 0%, #b88a32 46%, #dcbb74 100%);
+
+// — Banarasi maroon + saffron warmth ————————————————————————
+$maroon-700: #5f231d; // deep oxblood
+$maroon-500: #8a3528; // maroon accent
+$saffron: #d98a2b; // warm saffron pop
+
+// — Neutrals (ivory parchment) ——————————————————————————————
+$ivory: #f7f1e3; // page background — warm parchment
+$ivory-deep: #efe5d0; // alternating sections
+$paper: #fffdf6; // card surface — warm white
+$ink: #20271f; // primary text — deep green-black
+$muted: #5d5f52; // secondary text — warm grey
+$line: #e4d9c1; // hairline border on ivory
+$gold-line: rgba(176, 141, 62, 0.5); // gold hairline
+
+// — Back-compat aliases (components already import these) ————
+// Re-pointing them cascades the new palette across every file.
+$forest: $emerald-800;
+$green: $emerald-700;
+$leaf: $emerald-500;
+$leaf-soft: $emerald-100;
+$turmeric: $gold-500;
+$turmeric-soft: $gold-200;
+$chilli: $maroon-500;
+$chilli-soft: #ecd7cd;
+$cream: $ivory;
+$cream-deep: $ivory-deep;
+$primary-color: $ink;
+$green-color: $emerald-700;
+$orange-color: $maroon-500;
+$yellow-color: $gold-500;
+$paraghraph-color: $muted;
+$paraghraph-color2: #3a3a30;
+
+// — Typography ————————————————————————————————————————————————
+$font-display: "Cormorant Garamond", "Georgia", serif; // luxe headings
+$font-serif-alt: "Marcellus", "Cormorant Garamond", serif; // elegant caps
+$font-body: "Mukta", -apple-system, "Segoe UI", sans-serif; // body + Devanagari
+$font-deva: "Tiro Devanagari Hindi", "Mukta", serif; // Devanagari accents
+
+// — Radii ————————————————————————————————————————————————————
+$radius-sm: 8px;
+$radius: 14px;
+$radius-lg: 22px;
+$radius-pill: 999px;
+// arched ("Mughal") top for image frames, via border-radius.
+// unquote() keeps the "/" as CSS elliptical-radius syntax (not Sass division).
+$arch: unquote("48% 48% 8px 8px / 34% 34% 6px 6px");
+
+// — Shadows (warm, deep, luxe) ———————————————————————————————
+$shadow-xs: 0 1px 2px rgba(32, 28, 12, 0.06);
+$shadow-sm: 0 8px 24px rgba(28, 24, 10, 0.09);
+$shadow: 0 20px 48px rgba(15, 40, 30, 0.15);
+$shadow-lg: 0 32px 72px rgba(15, 40, 30, 0.24);
+$shadow-gold: 0 12px 32px rgba(176, 141, 62, 0.3);
+
+// — Motion ————————————————————————————————————————————————————
+$ease: cubic-bezier(0.22, 1, 0.36, 1);
+$transition: 0.5s $ease;
+
+// — Mixins ————————————————————————————————————————————————————
+@mixin card {
+  background: $paper;
+  border: 1px solid $line;
+  border-radius: $radius;
+  box-shadow: $shadow-sm;
+  transition: transform $transition, box-shadow $transition,
+    border-color $transition;
+}
+
+@mixin lift {
+  transform: translateY(-7px);
+  box-shadow: $shadow-lg;
+  border-color: $gold-line;
+}
+
+// Elegant caps kicker with flanking gold diamonds
+@mixin eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  font-family: $font-serif-alt;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: $green;
+  &::before,
+  &::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    flex: none;
+    background: $gold-500;
+    transform: rotate(45deg);
+  }
+}
+
+// Jali (carved-lattice) texture — overlapping circles in gold.
+// Apply on a low-opacity overlay layer over a dark band.
+@mixin jali {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46' viewBox='0 0 46 46'%3E%3Cg fill='none' stroke='%23b08d3e' stroke-width='1'%3E%3Ccircle cx='0' cy='23' r='23'/%3E%3Ccircle cx='46' cy='23' r='23'/%3E%3Ccircle cx='23' cy='0' r='23'/%3E%3Ccircle cx='23' cy='46' r='23'/%3E%3Ccircle cx='23' cy='23' r='23'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 46px 46px;
+}

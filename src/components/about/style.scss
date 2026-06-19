@@ -2,55 +2,115 @@
 
 .aboutUs {
   .aboutContent {
-    margin: 50px 0;
+    margin: 76px 0 24px;
+
     .textBlock {
       h1 {
-        margin: 0 0 5px;
-        font-size: 20px;
+        margin: 0 0 14px;
+        font-size: 36px;
         text-align: left;
-        color: $primary-color;
+        color: $ink;
+        font-weight: 600;
+      }
+      h2 {
+        font-size: 28px;
+        margin: 28px 0 10px;
+        font-weight: 600;
       }
       h3 {
-        font-size: 16px;
+        font-size: 19px;
         text-transform: none;
+        margin: 22px 0 8px;
+        color: $emerald-700;
+        font-weight: 600;
       }
       p {
-        margin-top: 0;
+        margin: 0 0 16px;
+        color: $muted;
+        line-height: 1.85;
+        font-size: 16.5px;
+      }
+      ul {
+        color: $muted;
+        padding-left: 20px;
+        li {
+          margin-bottom: 8px;
+          line-height: 1.7;
+        }
       }
     }
+
+    .aboutSideImg img {
+      width: 100%;
+      border-radius: $arch;
+      border: 1px solid $gold-line;
+      box-shadow: $shadow;
+    }
+
     .options {
       text-align: center;
-      margin-top: 80px;
+      margin-top: 40px;
+      background: $paper;
+      border: 1px solid $line;
+      border-radius: $radius;
+      padding: 38px 22px;
+      box-shadow: $shadow-sm;
+      height: calc(100% - 40px);
+      transition: transform $transition, box-shadow $transition,
+        border-color $transition;
+
+      h3 {
+        font-size: 20px;
+        text-transform: none;
+        margin: 20px 0 8px;
+        color: $ink;
+        font-weight: 600;
+      }
+      p {
+        color: $muted;
+        margin: 0;
+        line-height: 1.6;
+      }
       .optIcon {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        background: $orange-color;
-        border-radius: 100%;
-        width: 50px;
-        height: 50px;
-        border: 15px solid #fce3cd;
+        background: $gold-200;
+        border: 1px solid $gold-500;
+        border-radius: 50%;
+        width: 76px;
+        height: 76px;
+        img {
+          width: 34px;
+          height: 34px;
+          object-fit: contain;
+        }
+      }
+      &:hover {
+        transform: translateY(-7px);
+        box-shadow: $shadow-lg;
+        border-color: $gold-line;
       }
     }
   }
 }
 
 @media screen and (max-width: 767px) {
-  .aboutUs {
-    .aboutContent {
-      .textBlock {
-        padding: 0 15px;
-      }
-      .options {
-        padding: 0 15px;
-      }
+  .aboutUs .aboutContent {
+    margin: 40px 0 8px;
+    .textBlock {
+      padding: 0 15px;
+    }
+    .options {
+      margin: 16px 15px 0;
+      height: auto;
     }
   }
   .aboutSideImg {
     text-align: center;
-    padding-top: 50px;
+    padding-top: 30px;
     img {
-      width: 60%;
+      width: 100%;
     }
   }
 }

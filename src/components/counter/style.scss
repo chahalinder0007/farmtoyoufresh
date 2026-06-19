@@ -1,23 +1,54 @@
+@import "../../variables.scss";
+
 .counter {
-  background: #000000;
+  position: fixed;
+  bottom: 22px;
+  left: 22px;
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba($forest, 0.94);
   color: #ffffff;
-  position: absolute;
-  top: 65px;
-  right: 0;
-  padding: 10px 15px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  box-shadow: 2px 2px 13px rgba($color: #000000, $alpha: 0.8);
+  padding: 11px 18px 11px 15px;
+  border-radius: $radius-pill;
+  box-shadow: $shadow;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(#ffffff, 0.14);
+
+  &::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: $turmeric;
+    animation: counterPulse 2s infinite;
+  }
+
   p {
-    color: #ffffff;
+    color: rgba(#ffffff, 0.85);
     margin: 0;
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: $font-body;
     span {
-      font-size: 25px;
-      font-weight: bold;
-      color: #ffff00;
+      color: $turmeric;
+      font-weight: 700;
+      font-size: 15px;
+      margin-left: 2px;
     }
+  }
+}
+
+@keyframes counterPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba($turmeric, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 9px rgba($turmeric, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba($turmeric, 0);
   }
 }
 

@@ -90,7 +90,8 @@ const Products: React.FC = () => {
   ];
 
   return (
-    <div className="container">
+    <div className="container allProducts">
+      <span className="eyebrow">Shop</span>
       <h1>All Products</h1>
       <div className="productList products">
         <Tabs defaultActiveKey={category} items={items} onChange={onChange} />

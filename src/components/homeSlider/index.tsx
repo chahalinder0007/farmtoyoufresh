@@ -9,22 +9,26 @@ const HomeSlider: React.FC = () => {
     <Carousel
       autoPlay={true}
       infiniteLoop={true}
+      interval={5500}
+      transitionTime={750}
       stopOnHover={true}
       showThumbs={false}
+      showStatus={false}
+      showArrows={false}
     >
       {slides.map((c) => {
         return (
           <div key={c.key} className={c.contentLayout}>
+            <span className="heroJali" aria-hidden="true" />
             <div className="slideContent">
               <div className="container">
-                <h1 style={{ color: `${c.h1Color}` }}>{c.h1}</h1>
-                <h2 style={{ color: `${c.h2Color}` }}>{c.h2}</h2>
-                <p style={{ color: `${c.textColor}` }}>{c.text}</p>
-                <a
-                  type="primary"
-                  className="primary_btn"
-                  href={`${c.buttonLink}`}
-                >
+                <div className="heroKicker">
+                  <span className="deva">शुद्ध · जैविक · ताज़ा</span>
+                </div>
+                {c.h1 && <h1>{c.h1}</h1>}
+                {c.h2 && <h2>{c.h2}</h2>}
+                {c.text && <p>{c.text}</p>}
+                <a className="primary_btn" href={`${c.buttonLink}`}>
                   {c.buttonText}
                 </a>
               </div>

@@ -2,49 +2,167 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
+// ── Typography ───────────────────────────────────────────────
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  text-transform: uppercase;
+  font-family: $font-display;
+  color: $ink;
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-transform: none;
 }
+
 p {
-  line-height: 25px;
-  color: $paraghraph-color;
+  font-family: $font-body;
+  line-height: 1.75;
+  color: $muted;
 }
+
+a {
+  text-decoration: none;
+  transition: color 0.25s $ease;
+}
+
 #root {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
+
+// ── Layout ───────────────────────────────────────────────────
 .container {
   width: 100%;
+  padding: 0 22px;
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    width: 1180px;
+    max-width: 100%;
     margin: auto;
+    padding: 0;
   }
 }
 
+// ── Ornaments ────────────────────────────────────────────────
+.eyebrow {
+  @include eyebrow;
+  margin: 0 0 18px;
+}
+
+// Devanagari accent line — small, gold, set in a refined Hindi face
+.deva {
+  font-family: $font-deva;
+  color: $gold-700;
+  letter-spacing: 0.04em;
+}
+
+// Gold filigree divider: a foil diamond flanked by fading gold rules
+.rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 18px auto 0;
+  &::before,
+  &::after {
+    content: "";
+    height: 1px;
+    width: 66px;
+    background: linear-gradient(90deg, transparent, $gold-500);
+  }
+  &::after {
+    background: linear-gradient(90deg, $gold-500, transparent);
+  }
+  i {
+    width: 9px;
+    height: 9px;
+    flex: none;
+    background: $gold-grad;
+    transform: rotate(45deg);
+    box-shadow: 0 0 0 1px rgba($gold-500, 0.4);
+  }
+}
+
+// Arched ("Mughal") top — drop onto an image wrapper
+.arch {
+  border-radius: $arch;
+  overflow: hidden;
+}
+
+// ── Buttons (shared: <a.primary_btn> + AntD primary) ─────────
 .primary_btn,
 .ant-btn-primary {
-  background: $primary-color;
-  color: #ffffff;
-  font-size: 12px;
+  background: $emerald-700;
+  color: $ivory;
+  font-family: $font-serif-alt;
+  font-size: 13px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  border-radius: 6px;
-  height: 40px;
-  padding: 0px 15px;
+  border: 1px solid $gold-line;
+  border-radius: $radius-sm;
+  height: 50px;
+  padding: 0 30px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
+  font-weight: 400;
   text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 10px 26px rgba($emerald-800, 0.26);
+  transition: transform $transition, box-shadow $transition,
+    background $transition, border-color $transition;
 
   &:hover:not(:disabled):not(.ant-btn-disabled) {
-    color: #ffffff;
-    background: $green-color;
+    color: $gold-200;
+    background: $emerald-900;
+    border-color: $gold-500;
+    transform: translateY(-2px);
+    box-shadow: 0 16px 34px rgba($emerald-900, 0.34);
   }
+  &:disabled,
+  &.ant-btn-disabled {
+    background: $ivory-deep;
+    color: $muted;
+    border-color: $line;
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+// Gold-foil variant for hero / hero-level CTAs
+.gold_btn {
+  background: $gold-grad;
+  color: $emerald-900;
+  border: 1px solid rgba(#fff, 0.35);
+  font-weight: 700;
+  box-shadow: $shadow-gold;
+  &:hover:not(:disabled) {
+    color: $emerald-900;
+    background: $gold-grad;
+    border-color: #fff;
+    box-shadow: 0 18px 40px rgba($gold-500, 0.45);
+  }
+}
+
+// ── Accessibility & polish ───────────────────────────────────
+:focus-visible {
+  outline: 2px solid $gold-500;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: $gold-200;
+  color: $emerald-900;
+}
+
+img {
+  max-width: 100%;
 }

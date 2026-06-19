@@ -1,88 +1,91 @@
 @import "../../variables.scss";
 
 .headerBar {
-  background: $green-color;
-  height: auto;
-  margin-bottom: 15px;
-}
-.topBar {
-  height: auto;
-  align-items: center;
-  padding: 0 10px;
-  p {
-    color: #ffffff;
-    font-size: 14px;
-    text-transform: uppercase;
-    margin: 0;
-  }
-  .anticon-facebook {
-    color: #ffffff;
-  }
-  .facebook {
-    text-align: right;
+  background: linear-gradient(90deg, $emerald-900, $emerald-700);
+  border-bottom: 1px solid $gold-line;
+  .topBar {
+    align-items: center;
+    padding: 9px 0;
+    p {
+      color: $gold-200;
+      font-family: $font-serif-alt;
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .facebook {
+      text-align: right;
+    }
+    .anticon-facebook {
+      color: $gold-200;
+      font-size: 16px;
+      transition: color 0.25s, transform 0.25s;
+      &:hover {
+        color: $gold-400;
+        transform: translateY(-1px);
+      }
+    }
   }
 }
 
-.ant-menu-light > .ant-menu .ant-menu-item-selected {
-  background: $green-color;
-  color: #ffffff;
-}
-.ant-menu .ant-menu-submenu-title .anticon {
-  font-size: 30px;
-  color: $green-color;
-}
-.ant-menu-light.ant-menu-horizontal > .ant-menu-submenu-selected::after {
-  border-bottom-color: $green-color;
-}
-@media screen and (min-width: 1200px) {
-  .headerBar {
-    height: 30px;
-  }
-  .topBar {
-    padding: 0;
-    height: 30px;
-  }
-}
 .mainHeader {
-  padding-bottom: 15px;
-  margin-bottom: 4px;
-  border-bottom: 1px solid rgb(216, 216, 216);
-  .logo {
-    img {
-      width: 77px;
-    }
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba($paper, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 14px 0;
+  border-bottom: 1px solid $line;
+
+  .logo img {
+    width: 64px;
+    transition: transform 0.4s $ease;
   }
+  .logo:hover img {
+    transform: rotate(-3deg) scale(1.05);
+  }
+
   .phoneNumber {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     align-items: center;
+    gap: 12px;
     .anticon-phone {
-      font-size: 32px;
-      margin-right: 5px;
-      rotate: 100deg;
-      opacity: 0.7;
-      margin-top: 4px;
+      font-size: 26px;
+      color: $emerald-700;
+      background: $emerald-100;
+      padding: 10px;
+      border-radius: 50%;
+      rotate: 95deg;
+      border: 1px solid $gold-line;
     }
     p {
-      text-transform: uppercase;
-      font-size: 18px;
-      color: $primary-color;
-      font-weight: bold;
+      font-family: $font-body;
+      text-transform: none;
+      font-size: 16px;
+      color: $ink;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.25;
       strong {
-        color: gray;
-        font-size: 13px;
+        display: block;
+        font-family: $font-serif-alt;
+        color: $gold-700;
+        font-size: 11px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
       }
     }
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .mainHeader {
-    .logo {
-      img {
-        width: 55px;
-        margin-left: 15px;
-      }
+    .logo img {
+      width: 52px;
+      margin-left: 4px;
     }
     .phoneNumber {
       display: none;

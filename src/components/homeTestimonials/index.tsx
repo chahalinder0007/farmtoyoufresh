@@ -23,6 +23,7 @@ const HomeTestimonials = () => {
             <img src={image} className="testimonialImg" alt="product images" />
           </Col>
           <Col xs={24} lg={12}>
+            <span className="eyebrow">Kind Words</span>
             <h1>
               {title}
               <img src="./images/quotes.png" alt="" />

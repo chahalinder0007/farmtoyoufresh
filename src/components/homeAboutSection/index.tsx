@@ -10,9 +10,7 @@ const HomeAboutSection = () => {
       <Row justify="center" align="middle" gutter={50}>
         <Col xs={24} lg={12}>
           <div className="aboutContent">
-            <h4 style={{ color: `${homeAboutContent.smallTitleColor}` }}>
-              {homeAboutContent.smallTitle}
-            </h4>
+            <h4>{homeAboutContent.smallTitle}</h4>
             <h2>{homeAboutContent.mainTitle}</h2>
             <p>{homeAboutContent.aboutText}</p>
             <a

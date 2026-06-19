@@ -1,24 +1,52 @@
 @import "../../variables.scss";
 
 .productBlock {
-  margin: 50px 0;
+  margin: 64px 0;
+
   .productImg {
-    padding: 15px;
-    box-shadow: 0px 0px 10px #ddd;
-    border-radius: 5px;
+    padding: 18px;
+    background: $paper;
+    border: 1px solid $gold-line;
+    box-shadow: $shadow;
+    border-radius: $radius-lg;
     img {
       width: 100%;
+      border-radius: $arch;
+      border: 1px solid $gold-line;
+      display: block;
     }
   }
   .productInfo {
+    padding: 8px 0;
     h1 {
-      margin: 0 0 5px;
-      font-size: 25px;
+      margin: 0 0 8px;
+      font-size: 44px;
+      font-weight: 600;
     }
     h2 {
-      color: $green-color;
-      margin-top: 0;
-      font-size: 22px;
+      color: $emerald-700;
+      margin: 0 0 18px;
+      font-size: 26px;
+      font-family: $font-body;
+      font-weight: 700;
+    }
+    p {
+      color: $muted;
+      line-height: 1.8;
+      margin-bottom: 28px;
+      font-size: 16.5px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .productBlock {
+    margin: 40px 0;
+    .productInfo {
+      padding-top: 26px;
+      h1 {
+        font-size: 32px;
+      }
     }
   }
 }

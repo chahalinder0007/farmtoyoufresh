@@ -30,9 +30,11 @@ const Footer = () => {
           <Col xs={24} lg={5}>
             <h2>{contact.title}</h2>
             <ul>
-              <li>
-                <HomeFilled /> {contact.address}
-              </li>
+              {contact.address && (
+                <li>
+                  <HomeFilled /> {contact.address}
+                </li>
+              )}
               <li>
                 <PhoneFilled /> {contact.contactNumber}
               </li>

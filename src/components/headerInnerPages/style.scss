@@ -1,25 +1,64 @@
+@import "../../variables.scss";
+
 .innerHeader {
-  min-height: 100px;
+  position: relative;
+  min-height: 290px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  text-align: center;
   color: #ffffff;
-  h1 {
-    font-size: 35px;
-    margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(
+      180deg,
+      rgba($emerald-900, 0.8),
+      rgba($emerald-900, 0.92)
+    );
   }
-  p {
-    margin: 10px 0 0;
-    color: #ffffff;
+  // jali lattice wash over the full banner
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    @include jali;
+    opacity: 0.12;
+    pointer-events: none;
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  h1 {
+    font-family: $font-display;
+    color: $ivory;
+    font-size: 56px;
+    margin: 0;
+    font-weight: 600;
+    text-shadow: 0 2px 26px rgba($emerald-900, 0.5);
+  }
+  .rule {
+    &::before,
+    &::after {
+      width: 80px;
+    }
   }
 }
 
 @media screen and (max-width: 767px) {
   .innerHeader {
-    padding: 0 15px;
+    min-height: 200px;
     h1 {
-      font-size: 25px;
+      font-size: 34px;
     }
   }
 }

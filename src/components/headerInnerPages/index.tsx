@@ -11,9 +11,14 @@ const HeaderInnerPages: React.FC<InnerPageProps> = (props) => {
   return (
     <div
       className="innerHeader"
-      style={{ background: `url(${headerImg}) 0 0 no-repeat` }}
+      style={{ backgroundImage: `url(${headerImg})` }}
     >
-      <h1>{pageHeading}</h1>
+      <div className="container">
+        <h1>{pageHeading}</h1>
+        <div className="rule">
+          <i />
+        </div>
+      </div>
     </div>
   );
 };

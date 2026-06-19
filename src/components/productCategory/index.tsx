@@ -6,6 +6,13 @@ const ProductCategory = () => {
   return (
     <div className="container">
       <div className="productCat">
+        <div className="sectionHead">
+          <span className="eyebrow">Our Harvest</span>
+          <h2>Shop by Category</h2>
+          <div className="rule">
+            <i />
+          </div>
+        </div>
         <Row gutter={50}>
           {productCategories.map((c) => {
             return (

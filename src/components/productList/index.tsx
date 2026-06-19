@@ -40,6 +40,9 @@ const ProductList: React.FC<pulsesPropsType> = (props) => {
   return (
     <div className="container">
       <h1>{pageHeading}</h1>
+      <div className="rule">
+        <i />
+      </div>
       <Row gutter={50}>
         {products.map((c) => {
           return (

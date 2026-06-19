@@ -1,25 +1,58 @@
 @import "../../variables.scss";
+
 .homeAboutContent {
-  padding: 50px 0;
+  padding: 96px 22px;
+
   h4 {
-    color: $green-color;
+    @include eyebrow;
+    margin: 0 0 20px;
+  }
+  h2 {
+    font-size: 50px;
+    line-height: 1.05;
+    margin: 0 0 22px;
+    font-weight: 600;
   }
   p {
-    color: $paraghraph-color;
-    line-height: 25px;
-    text-align: justify;
+    color: $muted;
+    line-height: 1.85;
+    text-align: left;
+    margin-bottom: 34px;
+    font-size: 17px;
   }
+
   .aboutImage {
+    position: relative;
     img {
       width: 100%;
+      border-radius: $arch;
+      border: 1px solid $gold-line;
+      box-shadow: $shadow;
+      position: relative;
+      z-index: 1;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      right: -16px;
+      bottom: -16px;
+      width: 70%;
+      height: 72%;
+      border: 1px solid $gold-500;
+      border-radius: $arch;
+      z-index: 0;
     }
   }
 }
 
 @media screen and (max-width: 767px) {
   .homeAboutContent {
+    padding: 56px 0;
+    h2 {
+      font-size: 34px;
+    }
     .aboutContent {
-      margin-bottom: 15px;
+      margin-bottom: 36px;
     }
   }
 }

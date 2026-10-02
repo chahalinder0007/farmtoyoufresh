@@ -24,7 +24,21 @@ const HomeAboutSection = () => {
         </Col>
         <Col xs={24} lg={12}>
           <div className="aboutImage">
-            <img src={homeAboutContent.sideImage} alt="product images" />
+            <div className="farmSeal">
+              <span className="sealScript deva" lang="hi">
+                हल्दी
+              </span>
+              <div className="rule">
+                <i />
+              </div>
+              <span className="sealLine">Grown &amp; packed by</span>
+              <span className="sealName">
+                Kulwant Singh
+                <br />
+                Inderjit Singh Chahal
+              </span>
+              <span className="sealPlace">Punjab, India</span>
+            </div>
           </div>
         </Col>
       </Row>

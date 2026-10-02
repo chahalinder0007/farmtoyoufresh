@@ -1,340 +1,40 @@
-export const productListHeading1 = "Pulses Product";
-export const productListHeading2 = "Spices Product";
-export const productList = [
+import { labResult } from "../../business";
+
+export interface Product {
+  key: string;
+  productImg: string;
+  name: string;
+  size: string;
+  grams: number;
+  price: number;
+  buttonText: string;
+  buttonLink: string;
+  description: string;
+}
+
+const description = `Turmeric (haldi) powder from our family's fields in Punjab, packed in small batches. Batch ${labResult.batch} was lab-tested at ${labResult.value} ${labResult.measure}. Single ingredient: turmeric. Not certified organic.`;
+
+export const productList: Product[] = [
   {
-    key: "1",
-    type: "pulse",
-    productImg: "./images/pulse1.png",
-    name: "Arhar Dal",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=1", // Product ID should be match with key attribute value
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: false,
+    key: "turmeric-400",
+    productImg: "./images/turmeric-powder.png",
+    name: "Turmeric (Haldi) Powder",
+    size: "400 g",
+    grams: 400,
+    price: 299,
+    buttonText: "See details",
+    buttonLink: "#/productDetail?productId=turmeric-400",
+    description,
   },
   {
-    key: "2",
-    type: "pulse",
-    productImg: "./images/pulse2.png",
-    name: "Mung Bean",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=2",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: false,
-  },
-  {
-    key: "3",
-    type: "pulse",
-    productImg: "./images/pulse3.png",
-    name: "Lentil Pulse",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=3",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: false,
-  },
-  {
-    key: "4",
-    type: "pulse",
-    productImg: "./images/pulse4.png",
-    name: "Horse Gram",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=4",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: false,
-  },
-  {
-    key: "5",
-    type: "pulse",
-    productImg: "./images/pulse1.png",
-    name: "Arhar Dal",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=5",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
-  },
-  {
-    key: "6",
-    type: "pulse",
-    productImg: "./images/pulse2.png",
-    name: "Mung Bean",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=6",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
-  },
-  {
-    key: "7",
-    type: "pulse",
-    productImg: "./images/pulse3.png",
-    name: "Lentil Pulse",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=7",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
-  },
-  {
-    key: "8",
-    type: "pulse",
-    productImg: "./images/pulse4.png",
-    name: "Horse Gram",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=8",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
-  },
-  {
-    key: "9",
-    type: "pulse",
-    productImg: "./images/pulse1.png",
-    name: "Arhar Dal",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=9",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
-  },
-  {
-    key: "10",
-    type: "pulse",
-    productImg: "./images/pulse2.png",
-    name: "Mung Bean",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=10",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
-  },
-  {
-    key: "11",
-    type: "pulse",
-    productImg: "./images/pulse3.png",
-    name: "Lentil Pulse",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=11",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
-  },
-  {
-    key: "12",
-    type: "pulse",
-    productImg: "./images/pulse4.png",
-    name: "Horse Gram",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=12",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
-  },
-  {
-    key: "13",
-    type: "spice",
-    productImg: "./images/spice1.png",
-    name: "Garam Masala",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=13",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: false,
-  },
-  {
-    key: "14",
-    type: "spice",
-    productImg: "./images/spice2.png",
-    name: "Turmeric",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=14",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: false,
-  },
-  {
-    key: "15",
-    type: "spice",
-    productImg: "./images/spice3.png",
-    name: "Red chilli",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=15",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: false,
-  },
-  {
-    key: "16",
-    type: "spice",
-    productImg: "./images/spice4.png",
-    name: "Black Cardamom",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=16",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: false,
-  },
-  {
-    key: "17",
-    type: "spice",
-    productImg: "./images/spice1.png",
-    name: "Garam Masala",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=17",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
-  },
-  {
-    key: "18",
-    type: "spice",
-    productImg: "./images/spice2.png",
-    name: "Turmeric",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=18",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
-  },
-  {
-    key: "19",
-    type: "spice",
-    productImg: "./images/spice3.png",
-    name: "Red chilli",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=19",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
-  },
-  {
-    key: "20",
-    type: "spice",
-    productImg: "./images/spice4.png",
-    name: "Black Cardamom",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=20",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
-  },
-  {
-    key: "21",
-    type: "spice",
-    productImg: "./images/spice1.png",
-    name: "Garam Masala",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=21",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
-  },
-  {
-    key: "22",
-    type: "spice",
-    productImg: "./images/spice2.png",
-    name: "Turmeric",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=22",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
-  },
-  {
-    key: "23",
-    type: "spice",
-    productImg: "./images/spice3.png",
-    name: "Red chilli",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=23",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
-  },
-  {
-    key: "24",
-    type: "spice",
-    productImg: "./images/spice4.png",
-    name: "Black Cardamom",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=24",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
-  },
-  {
-    key: "25",
-    type: "spice",
-    productImg: "./images/spice1.png",
-    name: "Garam Masala",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=25",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
-  },
-  {
-    key: "26",
-    type: "spice",
-    productImg: "./images/spice2.png",
-    name: "Turmeric",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=26",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
-  },
-  {
-    key: "27",
-    type: "spice",
-    productImg: "./images/spice3.png",
-    name: "Red chilli",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=27",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
-  },
-  {
-    key: "28",
-    type: "spice",
-    productImg: "./images/spice4.png",
-    name: "Black Cardamom",
-    price: "20.00/-",
-    buttonText: "Buy Now",
-    buttonLink: "#/productDetail?productId=28",
-    description:
-      "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-    inStock: true,
+    key: "turmeric-100",
+    productImg: "./images/turmeric-powder.png",
+    name: "Turmeric (Haldi) Powder",
+    size: "100 g sampler",
+    grams: 100,
+    price: 89,
+    buttonText: "See details",
+    buttonLink: "#/productDetail?productId=turmeric-100",
+    description,
   },
 ];

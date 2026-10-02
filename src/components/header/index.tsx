@@ -1,9 +1,14 @@
 import Navigation from "../navigation";
-import { FacebookOutlined, PhoneOutlined } from "@ant-design/icons";
+import {
+  PhoneOutlined,
+  WhatsAppOutlined,
+  YoutubeFilled,
+} from "@ant-design/icons";
 import "./style.scss";
 import { Col, Row } from "antd";
 import React from "react";
-import { facebookLink, logo, phoneDetail, topheaderText } from "./content";
+import { logo, phoneDetail, topheaderText } from "./content";
+import { business, whatsappLink } from "../../business";
 
 const Header: React.FC = () => {
   return (
@@ -15,9 +20,22 @@ const Header: React.FC = () => {
               <Col span={20}>
                 <p>{topheaderText}</p>
               </Col>
-              <Col span={4} className="facebook">
-                <a href={facebookLink}>
-                  <FacebookOutlined />
+              <Col span={4} className="social">
+                <a
+                  href={business.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Farm To You Fresh on YouTube"
+                >
+                  <YoutubeFilled />
+                </a>
+                <a
+                  href={whatsappLink("Hi! I'd like to know more about your turmeric.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Message us on WhatsApp"
+                >
+                  <WhatsAppOutlined />
                 </a>
               </Col>
             </Row>

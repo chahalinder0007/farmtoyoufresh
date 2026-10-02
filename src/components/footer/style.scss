@@ -83,6 +83,12 @@
       align-items: center;
       margin-bottom: 16px;
       font-family: $font-body;
+      a {
+        color: rgba(#ffffff, 0.86);
+        &:hover {
+          color: $gold-200;
+        }
+      }
       .anticon {
         margin-right: 12px;
         color: $gold-400;
@@ -108,6 +114,26 @@
     .anticon {
       color: $gold-400;
       margin-right: 5px;
+    }
+    p {
+      max-width: none;
+      margin: 0 auto;
+      padding: 0 22px;
+      color: rgba(#ffffff, 0.68);
+      line-height: 1.7;
+    }
+    a {
+      color: $gold-400;
+      &:hover {
+        color: #ffffff;
+      }
+    }
+    .disclaimer {
+      margin-top: 8px;
+      font-family: $font-body;
+      font-size: 12.5px;
+      letter-spacing: 0;
+      color: rgba(#ffffff, 0.55);
     }
   }
 }

@@ -11,6 +11,10 @@
     border-radius: $radius-lg;
     img {
       width: 100%;
+      max-height: 460px;
+      object-fit: contain;
+      padding: 28px;
+      background: radial-gradient(circle at 50% 42%, $paper, $ivory-deep);
       border-radius: $arch;
       border: 1px solid $gold-line;
       display: block;
@@ -18,23 +22,91 @@
   }
   .productInfo {
     padding: 8px 0;
+    .eyebrow {
+      margin-bottom: 10px;
+    }
     h1 {
-      margin: 0 0 8px;
+      margin: 0 0 14px;
       font-size: 44px;
       font-weight: 600;
     }
     h2 {
       color: $emerald-700;
-      margin: 0 0 18px;
-      font-size: 26px;
+      margin: 0 0 4px;
+      font-size: 30px;
       font-family: $font-body;
       font-weight: 700;
     }
     p {
       color: $muted;
       line-height: 1.8;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
       font-size: 16.5px;
+    }
+    .priceNote {
+      font-size: 14px;
+      margin: 0 0 18px;
+    }
+    .sizes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 22px;
+    }
+    .size {
+      padding: 8px 18px;
+      border: 1px solid $line;
+      border-radius: $radius-pill;
+      background: $paper;
+      color: $ink;
+      font-family: $font-body;
+      font-size: 15px;
+      transition: border-color 0.25s, color 0.25s, background 0.25s;
+      &:hover {
+        border-color: $gold-500;
+        color: $emerald-700;
+      }
+      &.selected {
+        background: $emerald-700;
+        border-color: $emerald-700;
+        color: $ivory;
+      }
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 0 0 32px;
+      .anticon {
+        margin-right: 9px;
+        font-size: 17px;
+      }
+    }
+    .facts {
+      display: grid;
+      grid-template-columns: minmax(0, 12rem) minmax(0, 1fr);
+      margin: 0 0 16px;
+      border-top: 1px solid $line;
+      dt,
+      dd {
+        margin: 0;
+        padding: 11px 0;
+        border-bottom: 1px solid $line;
+        font-family: $font-body;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+      dt {
+        color: $muted;
+        padding-right: 16px;
+      }
+      dd {
+        color: $ink;
+      }
+    }
+    .disclaimer {
+      font-size: 12.5px;
+      margin: 0;
     }
   }
 }
@@ -46,6 +118,13 @@
       padding-top: 26px;
       h1 {
         font-size: 32px;
+      }
+      .facts {
+        grid-template-columns: minmax(0, 1fr);
+        dt {
+          border-bottom: 0;
+          padding-bottom: 0;
+        }
       }
     }
   }

@@ -1,0 +1,61 @@
+@import "../../variables.scss";
+
+.container.policies {
+  max-width: 800px;
+  padding-top: 48px;
+  padding-bottom: 72px;
+
+  section {
+    padding: 30px 0;
+    border-bottom: 1px solid $line;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+  h2 {
+    font-size: 30px;
+    margin: 0 0 12px;
+  }
+  p {
+    font-size: 16.5px;
+    margin: 0 0 14px;
+  }
+  .primary_btn .anticon {
+    margin-right: 9px;
+    font-size: 17px;
+  }
+  dl {
+    display: grid;
+    grid-template-columns: minmax(0, 11rem) minmax(0, 1fr);
+    margin: 0 0 16px;
+    border-top: 1px solid $line;
+    dt,
+    dd {
+      margin: 0;
+      padding: 10px 0;
+      border-bottom: 1px solid $line;
+      font-family: $font-body;
+      line-height: 1.5;
+    }
+    dt {
+      color: $muted;
+      padding-right: 16px;
+    }
+    dd {
+      color: $ink;
+    }
+  }
+  .disclaimer {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container.policies dl {
+    grid-template-columns: minmax(0, 1fr);
+    dt {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}

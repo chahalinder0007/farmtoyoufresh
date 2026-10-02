@@ -2,14 +2,21 @@
 
 .allProducts {
   padding-top: 44px;
-  .eyebrow {
-    @include eyebrow;
-    margin-bottom: 12px;
-  }
-  > h1 {
-    text-align: left;
-    font-size: 40px;
-    margin: 0;
+  .intro {
+    .eyebrow {
+      @include eyebrow;
+      margin-bottom: 12px;
+    }
+    h1 {
+      text-align: left;
+      font-size: 40px;
+      margin: 0;
+    }
+    p {
+      max-width: 620px;
+      margin: 12px 0 0;
+      font-size: 17px;
+    }
   }
 }
 
@@ -21,14 +28,5 @@
 .products {
   .product {
     margin: 24px 0;
-  }
-  .ant-tabs {
-    margin-top: 8px;
-    .ant-tabs-tab {
-      font-weight: 700;
-    }
-    .ant-tabs-nav::before {
-      border-bottom-color: $line;
-    }
   }
 }

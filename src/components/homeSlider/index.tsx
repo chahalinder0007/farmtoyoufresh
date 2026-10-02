@@ -2,12 +2,12 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./style.scss";
-import { slides } from "./content";
+import { kicker, slides } from "./content";
 
 const HomeSlider: React.FC = () => {
   return (
     <Carousel
-      autoPlay={true}
+      autoPlay={slides.length > 1}
       infiniteLoop={true}
       interval={5500}
       transitionTime={750}
@@ -15,6 +15,7 @@ const HomeSlider: React.FC = () => {
       showThumbs={false}
       showStatus={false}
       showArrows={false}
+      showIndicators={slides.length > 1}
     >
       {slides.map((c) => {
         return (
@@ -23,7 +24,7 @@ const HomeSlider: React.FC = () => {
             <div className="slideContent">
               <div className="container">
                 <div className="heroKicker">
-                  <span className="deva">शुद्ध · जैविक · ताज़ा</span>
+                  <span className="deva">{kicker}</span>
                 </div>
                 {c.h1 && <h1>{c.h1}</h1>}
                 {c.h2 && <h2>{c.h2}</h2>}
@@ -33,7 +34,7 @@ const HomeSlider: React.FC = () => {
                 </a>
               </div>
             </div>
-            <img src={c.image} alt="slider" />
+            <img src={c.image} alt="" />
           </div>
         );
       })}

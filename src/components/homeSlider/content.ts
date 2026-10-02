@@ -1,41 +1,17 @@
+import { labResult } from "../../business";
+
+// "From the field to the kitchen"
+export const kicker = "खेत से रसोई तक";
+
 export const slides = [
   {
     key: "1",
-    contentLayout: "centerText",
+    contentLayout: "sideContext",
     image: "./images/slide1.jpg",
-    h1: "Fresh Farm For You",
-    h1Color: "#ffffff",
-    h2: "",
-    h2Color: "#000000",
-    text: "",
-    textColor: "#000000",
-    buttonText: "View Products",
-    buttonLink: "#/products",
-  },
-  {
-    key: "2",
-    contentLayout: "sideContext",
-    image: "./images/slide3.png",
-    h1: "Helping you",
-    h1Color: "#6D7C17",
-    h2: "getting better life",
-    h2Color: "#000000",
-    text: "",
-    textColor: "#000000",
-    buttonText: "View Products",
-    buttonLink: "#/products",
-  },
-  {
-    key: "3",
-    contentLayout: "sideContext",
-    image: "./images/slide2.jpg",
-    h1: "Organic & Fresh",
-    h1Color: "#038D06",
-    h2: "Pulses, Spices, Herbs",
-    h2Color: "#000000",
-    text: "Assured Quality Every Time",
-    textColor: "#000000",
-    buttonText: "View Products",
+    h1: "Haldi from our family's fields",
+    h2: "Grown in Punjab, packed by the people who grew it",
+    text: `Batch ${labResult.batch} lab-tested at ${labResult.value} ${labResult.measure}.`,
+    buttonText: "See the turmeric",
     buttonLink: "#/products",
   },
 ];

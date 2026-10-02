@@ -31,6 +31,73 @@
       position: relative;
       z-index: 1;
     }
+    // A heritage seal in place of a stock photo
+    .farmSeal {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      justify-items: center;
+      align-content: center;
+      gap: 10px;
+      max-width: 440px;
+      min-height: 480px;
+      margin: 0 auto;
+      padding: 56px 32px;
+      text-align: center;
+      overflow: hidden;
+      border-radius: $arch;
+      border: 1px solid $gold-line;
+      background: radial-gradient(
+        circle at 50% 28%,
+        $emerald-700,
+        $emerald-900 78%
+      );
+      box-shadow: $shadow, inset 0 0 0 10px rgba($emerald-900, 0.6),
+        inset 0 0 0 11px rgba($gold-500, 0.45);
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        @include jali;
+        opacity: 0.14;
+        pointer-events: none;
+      }
+      > * {
+        position: relative;
+      }
+      .sealScript {
+        font-size: clamp(76px, 10vw, 118px);
+        line-height: 1.15;
+        background: $gold-grad;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .rule {
+        margin: 0 auto 8px;
+      }
+      .sealLine {
+        font-family: $font-serif-alt;
+        font-size: 12px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: $gold-200;
+      }
+      .sealName {
+        font-family: $font-display;
+        font-size: 26px;
+        line-height: 1.25;
+        color: #ffffff;
+      }
+      .sealPlace {
+        margin-top: 6px;
+        font-family: $font-body;
+        font-size: 13px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgba(#ffffff, 0.7);
+      }
+    }
     &::before {
       content: "";
       position: absolute;

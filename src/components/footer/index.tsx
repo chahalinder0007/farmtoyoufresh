@@ -1,6 +1,5 @@
 import { Col, Row } from "antd";
 import {
-  HomeFilled,
   PhoneFilled,
   ClockCircleOutlined,
   MailOutlined,
@@ -32,11 +31,6 @@ const Footer = () => {
           <Col xs={24} lg={7}>
             <h2>{contact.title}</h2>
             <ul>
-              {contact.address && (
-                <li>
-                  <HomeFilled /> {contact.address}
-                </li>
-              )}
               <li>
                 <PhoneFilled /> {contact.contactNumber}
               </li>

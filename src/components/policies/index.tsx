@@ -68,8 +68,6 @@ const Policies: React.FC = () => {
             )}
             Grievance Officer, {business.name}
             <br />
-            {business.address}
-            <br />
             {business.phone} · {business.email}
           </p>
           <p>
@@ -82,8 +80,6 @@ const Policies: React.FC = () => {
           <dl>
             <dt>Seller</dt>
             <dd>{business.name} (partnership firm)</dd>
-            <dt>Address</dt>
-            <dd>{business.address}</dd>
             {business.fssaiLicence && (
               <>
                 <dt>FSSAI licence no.</dt>

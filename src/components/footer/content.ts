@@ -9,7 +9,6 @@ export const about = {
 
 export const contact = {
   title: "Contact Us",
-  address: business.address,
   contactNumber: business.phone,
   timing: business.hours,
   emailId: business.email,

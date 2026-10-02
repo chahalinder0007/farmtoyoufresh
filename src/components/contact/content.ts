@@ -13,9 +13,4 @@ export const list = [
     title: "Email",
     text: business.email,
   },
-  {
-    icon: "./images/map-icon.png",
-    title: "Address",
-    text: business.address,
-  },
 ];

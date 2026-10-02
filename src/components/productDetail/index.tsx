@@ -39,7 +39,7 @@ const ProductDetail: React.FC = () => {
       `Lab result, batch ${labResult.batch}`,
       `${labResult.value} ${labResult.measure}`,
     ],
-    ["Packed and marketed by", `${business.name}, ${business.address}`],
+    ["Packed and marketed by", business.name],
     ...(business.fssaiLicence
       ? [["FSSAI licence no.", business.fssaiLicence] as [string, string]]
       : []),

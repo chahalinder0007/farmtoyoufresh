@@ -2,13 +2,14 @@
 // on the site until they are filled in.
 export const business = {
   name: "Farm To You Fresh",
-  // Replace with the full registered address (as on GST and FSSAI).
-  address: "New Chandigarh, SAS Nagar (Mohali), Punjab",
+  // The registered address is the owners' home, so it is deliberately
+  // not shown on the site; sales happen online only.
   phone: "+91 97807 80995",
   whatsappNumber: "919780780995",
   email: "sales@farmtoyoufresh.com",
   hours: "9:30 AM – 7:30 PM",
-  // 14-digit FSSAI licence number.
+  // 14-digit FSSAI licence number. Licence 12124999000360 shows validity
+  // only until 03-12-2025; put it here once its renewal is confirmed.
   fssaiLicence: "",
   // GSTIN; must be shown on the site from 1 January 2027.
   gstin: "",

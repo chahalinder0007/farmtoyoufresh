@@ -1,13 +1,14 @@
-export const topheaderText =
-  "Buy organic - dals & pulses/spices online at best price";
+import { business } from "../../business";
 
-export const facebookLink = "/";
+export const topheaderText = "Turmeric from our family farm in Punjab";
+
 export const logo = {
   imgPath: "./images/logo.svg",
   imgAlt: "Farm To You Fresh",
   linkPath: "/",
 };
 export const phoneDetail = {
-  number: "+919780780995",
+  // Without spaces, so it fits the header's narrow column.
+  number: business.phone.replace(/\s/g, ""),
   text: "Call us now",
 };

@@ -11,7 +11,7 @@ const Blogs: React.FC = () => {
       <HeaderInnerPages pageHeading={pageHeading} headerImg={headerImg} />
       <div className="container">
         <div className="blogs">
-          <Row>
+          <Row justify="center">
             {list.map((c) => {
               return (
                 <Col key={c.key} xs={24} sm={12} lg={8}>

@@ -1,14 +1,16 @@
-export const pageHeading = "Feel free to contact with us any time";
+import { business } from "../../business";
+
+export const pageHeading = "Talk to Us";
 export const headerImg = "./images/inner-header-bg.png";
 export const list = [
   {
     icon: "./images/phone-icon.png",
-    title: "Phone Number:",
-    text: "+91 9780780995",
+    title: "Phone and WhatsApp",
+    text: business.phone,
   },
   {
     icon: "./images/mail-icon.png",
-    title: "Mail Address:",
-    text: "sales@farmtoyoufresh.com",
+    title: "Email",
+    text: business.email,
   },
 ];

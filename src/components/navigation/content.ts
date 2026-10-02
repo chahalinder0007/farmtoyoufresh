@@ -1,11 +1,10 @@
-// import type { MenuProps } from "antd";
 export const items = [
   {
     label: "Home",
     key: "/",
   },
   {
-    label: "Products",
+    label: "Turmeric",
     key: "#/products",
   },
   {
@@ -13,12 +12,8 @@ export const items = [
     key: "#/about",
   },
   {
-    label: "Blogs",
+    label: "Blog",
     key: "#/blogs",
-  },
-  {
-    label: "Testimonial",
-    key: "#/testimonials",
   },
   {
     label: "Contact Us",

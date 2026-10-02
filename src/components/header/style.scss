@@ -14,14 +14,19 @@
       text-transform: uppercase;
       margin: 0;
     }
-    .facebook {
-      text-align: right;
-    }
-    .anticon-facebook {
-      color: $gold-200;
-      font-size: 16px;
-      transition: color 0.25s, transform 0.25s;
-      &:hover {
+    .social {
+      display: flex;
+      justify-content: flex-end;
+      gap: 16px;
+      a {
+        display: inline-flex;
+      }
+      .anticon {
+        color: $gold-200;
+        font-size: 16px;
+        transition: color 0.25s, transform 0.25s;
+      }
+      a:hover .anticon {
         color: $gold-400;
         transform: translateY(-1px);
       }

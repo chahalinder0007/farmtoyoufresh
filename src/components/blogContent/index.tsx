@@ -7,6 +7,9 @@ import axios from "axios";
 import ReactMarkdown from "react-markdown";
 import { useLocation } from "react-router-dom";
 
+const missingNote =
+  "## This note is no longer available\n\n[See all notes from the farm](#/blogs)";
+
 const BlogContent: React.FC = () => {
   const location = useLocation();
   const [text, setText] = useState("");
@@ -17,8 +20,11 @@ const BlogContent: React.FC = () => {
     axios
       .get(`/content/${fileName}.md`, { responseType: "text" })
       .then((res) => {
-        setText(res.data);
-      });
+        // The dev server answers unknown paths with index.html.
+        const body = typeof res.data === "string" ? res.data : "";
+        setText(body.trimStart().startsWith("<") ? missingNote : body);
+      })
+      .catch(() => setText(missingNote));
   }, [location?.search]);
 
   return (

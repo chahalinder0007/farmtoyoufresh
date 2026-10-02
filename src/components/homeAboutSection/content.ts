@@ -1,10 +1,8 @@
 export const homeAboutContent = {
   smallTitle: "About Us",
-  smallTitleColor: "#0e9210",
-  mainTitle: "Your Health, Our Harvest",
+  mainTitle: "A farming family from Punjab",
   aboutText:
-    "Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.",
-  buttonText: "View More",
+    "We're a family with generations of farming behind us. Our turmeric is grown on our own fields, then processed and packed in small batches, and every batch is lab-tested before it goes on sale. Kulwant Singh and Inderjit Singh Chahal run the farm and oversee every batch.",
+  buttonText: "Our story",
   buttonLink: "about",
-  sideImage: "./images/about.png",
 };

@@ -1,30 +1,30 @@
-// content.ts
+import { business, labResult } from "../../business";
 
-export const pageHeading = "Your Health, Our Harvest";
+export const pageHeading = "From Our Fields to Your Kitchen";
 export const pageNavigation = "Home>About Us";
 export const headerImg = "./images/inner-header-bg.png";
 export const content = {
-  sideImg: "./images/aboutus-img.png",
+  sideImg: "./images/slide1.jpg",
 };
 export const options = [
   {
     icon: "./images/fresh.png",
-    title: "100% Fresh",
-    text: "Purchasing from select family farmers who farm organically.",
-  },
-  {
-    icon: "./images/support.png",
-    title: "Reliable Support Guranted",
-    text: "You are welcome to call us between 11 a.m. to 9 p.m. for any support.",
+    title: "Family Farm",
+    text: "Grown on our family's fields in Punjab and packed by the family that grew it.",
   },
   {
     icon: "./images/secured.png",
-    title: "Secured Payment",
-    text: "Our payments are secured by .....",
+    title: "Lab-Tested",
+    text: `Every batch is tested before sale. Batch ${labResult.batch}: ${labResult.value} ${labResult.measure}.`,
+  },
+  {
+    icon: "./images/support.png",
+    title: "Real Support",
+    text: `Call or WhatsApp ${business.phone}, ${business.hours}.`,
   },
   {
     icon: "./images/return.png",
-    title: "Return Policy",
-    text: "In case of product damaged or not to our quality we will replace it no questions asked.",
+    title: "Replacement Promise",
+    text: "Pack damaged, or not happy with the quality? Message us within 7 days and we'll replace it or refund you.",
   },
 ];

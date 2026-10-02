@@ -1,22 +1,9 @@
 import React from "react";
 import HomeAboutSection from "../homeAboutSection";
 import HomeSlider from "../homeSlider";
-import HomeTestimonials from "../homeTestimonials";
-import ProductCategory from "../productCategory";
-import "./style.scss";
+import LabBatch from "../labBatch";
 import ProductList from "../productList";
-
-// interface productListTypes {
-//   key: string;
-//   type: string;
-//   productImg: string;
-//   name: string;
-//   price: string;
-//   buttonText: string;
-//   buttonLink: string;
-//   description: string;
-//   inStock: boolean;
-// }
+import "./style.scss";
 
 const Home: React.FC = () => {
   return (
@@ -24,13 +11,11 @@ const Home: React.FC = () => {
       <div className="slider">
         <HomeSlider />
       </div>
-      <ProductCategory />
       <div className="productList">
-        <ProductList pageHeading="Pulses Products" category="pulse" />
-        <ProductList pageHeading="Spices Products" category="spice" />
+        <ProductList pageHeading="Our Turmeric" />
       </div>
+      <LabBatch />
       <HomeAboutSection />
-      <HomeTestimonials />
     </>
   );
 };

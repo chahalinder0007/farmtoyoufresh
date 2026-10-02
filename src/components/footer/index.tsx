@@ -1,14 +1,15 @@
 import { Col, Row } from "antd";
 import {
-  HomeFilled,
   PhoneFilled,
   ClockCircleOutlined,
   MailOutlined,
   CopyrightCircleOutlined,
+  YoutubeFilled,
 } from "@ant-design/icons";
 import "./style.scss";
 import { about, contact, copyrightText } from "./content";
 import { useAppContext } from "../../context";
+import { brandDisclaimer, business } from "../../business";
 
 const Footer = () => {
   const { setCurrentPageName } = useAppContext();
@@ -16,7 +17,7 @@ const Footer = () => {
     <div className="footer">
       <div className="container footerTop">
         <Row justify="space-between">
-          <Col xs={24} lg={17} className="footerAboutus">
+          <Col xs={24} lg={15} className="footerAboutus">
             <h2>{about.title}</h2>
             <p>{about.text}</p>
             <a
@@ -27,14 +28,9 @@ const Footer = () => {
               {about.buttonText}
             </a>
           </Col>
-          <Col xs={24} lg={5}>
+          <Col xs={24} lg={7}>
             <h2>{contact.title}</h2>
             <ul>
-              {contact.address && (
-                <li>
-                  <HomeFilled /> {contact.address}
-                </li>
-              )}
               <li>
                 <PhoneFilled /> {contact.contactNumber}
               </li>
@@ -44,12 +40,25 @@ const Footer = () => {
               <li>
                 <MailOutlined /> {contact.emailId}
               </li>
+              <li>
+                <YoutubeFilled />
+                <a href={business.youtube} target="_blank" rel="noopener noreferrer">
+                  Farm to YOU Fresh on YouTube
+                </a>
+              </li>
             </ul>
           </Col>
         </Row>
       </div>
       <div className="copyrights">
-        <CopyrightCircleOutlined /> {copyrightText}
+        <p>
+          <CopyrightCircleOutlined /> {copyrightText}
+          {business.fssaiLicence && <> · FSSAI Lic. No. {business.fssaiLicence}</>}
+          {business.gstin && <> · GSTIN {business.gstin}</>}
+          {" · "}
+          <a href="#/policies">Orders, returns &amp; grievances</a>
+        </p>
+        <p className="disclaimer">{brandDisclaimer}</p>
       </div>
     </div>
   );

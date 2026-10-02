@@ -1,15 +1,19 @@
 # About Us
 
-Welcome to Farm You Fresh, where your health and well-being are at the heart of everything we do. We're not just another agribusiness; we're a family with a rich farming heritage that spans multiple generations. Our story is deeply rooted in the soil we till, the seeds we sow, and the produce we share with you.
+We're a farming family from Punjab, and Farm To You Fresh is how we sell what we grow directly to you. Right now that's one thing: turmeric (haldi) powder from our own fields.
 
-# Farm to Table, With Love
+# From Our Fields to Your Kitchen
 
-Owners Kulwant Singh and Inderjit Singh Chahal personally oversee every aspect of our operation. From planting the seeds in our family-owned fields to nurturing each plant through its growth stages, from harvest to packaging, it's all done under one roof and under our watchful eyes. This ensures that you get nothing but the best, most nutritious produce delivered straight to your table.
+Kulwant Singh and Inderjit Singh Chahal run the farm and oversee every batch, from the field to the sealed pack. Our turmeric is grown on our family's land, processed, and packed in small batches, so every pack carries a recent packing date.
 
-# Quality You Can Trust
+# A Lab Result for Every Batch
 
-We believe in transparency and traceability. Our quality control begins in the field and continues through to the packaging and delivery. We monitor every step to ensure that you receive only the highest quality, farm-fresh goodness. Because when it comes to your health, we leave nothing to chance.
+We don't ask you to take our word for quality. Each batch is tested by a lab before it goes on sale, and we tell you the result: our first batch, L-01, measured 4.16% curcumin. Message us on WhatsApp and we'll send you the report.
 
-# Join Our Family
+# What We Don't Claim
 
-We invite you to be a part of our journey towards a healthier, happier life. With Farm You Fresh, you're not just a customer; you're family. And family deserves nothing but the best.
+Our turmeric is not certified organic, and we don't make health claims about it. We'd rather tell you exactly where it comes from and what a lab found in it.
+
+# Talk to Us
+
+Call or WhatsApp +91 97807 80995 (9:30 AM – 7:30 PM), or email sales@farmtoyoufresh.com.

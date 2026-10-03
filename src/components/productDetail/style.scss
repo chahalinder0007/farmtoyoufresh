@@ -82,6 +82,30 @@
         font-size: 17px;
       }
     }
+    .comingSoon {
+      background: $ivory-deep;
+      color: $muted;
+      border-color: $line;
+      box-shadow: none;
+      cursor: default;
+      &:hover {
+        transform: none;
+      }
+    }
+    .askLink {
+      font-size: 15px;
+      margin: -14px 0 28px;
+      a {
+        color: $emerald-700;
+        font-weight: 600;
+        &:hover {
+          color: $emerald-500;
+        }
+      }
+      .anticon {
+        margin-right: 6px;
+      }
+    }
     .facts {
       display: grid;
       grid-template-columns: minmax(0, 12rem) minmax(0, 1fr);
@@ -119,7 +143,31 @@
       h1 {
         font-size: 32px;
       }
-      .facts {
+      .comingSoon {
+      background: $ivory-deep;
+      color: $muted;
+      border-color: $line;
+      box-shadow: none;
+      cursor: default;
+      &:hover {
+        transform: none;
+      }
+    }
+    .askLink {
+      font-size: 15px;
+      margin: -14px 0 28px;
+      a {
+        color: $emerald-700;
+        font-weight: 600;
+        &:hover {
+          color: $emerald-500;
+        }
+      }
+      .anticon {
+        margin-right: 6px;
+      }
+    }
+    .facts {
         grid-template-columns: minmax(0, 1fr);
         dt {
           border-bottom: 0;

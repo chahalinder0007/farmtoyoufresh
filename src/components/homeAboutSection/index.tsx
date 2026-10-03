@@ -31,7 +31,7 @@ const HomeAboutSection = () => {
               <div className="rule">
                 <i />
               </div>
-              <span className="sealLine">Grown &amp; packed by</span>
+              <span className="sealLine">Grown by</span>
               <span className="sealName">
                 Kulwant Singh
                 <br />

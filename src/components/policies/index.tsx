@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { WhatsAppOutlined } from "@ant-design/icons";
+import { ShoppingOutlined, WhatsAppOutlined } from "@ant-design/icons";
 import HeaderInnerPages from "../headerInnerPages";
 import { useAppContext } from "../../context";
 import { brandDisclaimer, business, whatsappLink } from "../../business";
@@ -16,49 +16,36 @@ const Policies: React.FC = () => {
   return (
     <>
       <HeaderInnerPages
-        pageHeading="Orders, Returns & Grievances"
+        pageHeading="Buying, Returns & Questions"
         headerImg="./images/inner-header-bg.png"
       />
       <div className="container policies">
         <section>
-          <h2>Ordering and payment</h2>
+          <h2>Where to buy</h2>
           <p>
-            Order on WhatsApp at {business.phone}. We confirm the pack, the
-            price and the delivery before you pay. Payment is by UPI, once we
-            have confirmed your order.
-          </p>
-          <a
-            className="primary_btn"
-            href={whatsappLink("Hi! I'd like to order your turmeric.")}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <WhatsAppOutlined /> Order on WhatsApp
-          </a>
-        </section>
-        <section>
-          <h2>Delivery</h2>
-          <p>
-            We deliver to your door inside Omaxe New Chandigarh at no charge.
-            For any other address we tell you the courier charge before you
-            pay.
-          </p>
-        </section>
-        <section>
-          <h2>Returns, replacements and refunds</h2>
-          <p>
-            Because this is food, opened packs can't be returned. If a pack
-            arrives damaged or leaking, isn't what you ordered, or you're not
-            happy with its quality, message us within 7 days of delivery with a
-            photo. We'll replace it or refund you in full. Refunds go back to
-            the account you paid from within 7 days.
+            We sell online only, on Amazon.in.
+            {business.amazonUrl ? "" : " Our listing is coming soon."} Orders,
+            payment, delivery, returns and refunds are handled by Amazon under
+            Amazon's policies.
           </p>
           {business.amazonUrl && (
-            <p>Orders placed on Amazon follow Amazon's return and refund policy.</p>
+            <a
+              className="primary_btn gold_btn"
+              href={business.amazonUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ShoppingOutlined /> Buy on Amazon
+            </a>
           )}
         </section>
         <section>
-          <h2>Grievance officer</h2>
+          <h2>Questions and complaints</h2>
+          <p>
+            About an Amazon order: message us through Amazon from your order
+            page. About the turmeric or the lab report: message us on WhatsApp
+            or email {business.email}.
+          </p>
           <p>
             {business.grievanceOfficer && (
               <>
@@ -74,6 +61,14 @@ const Policies: React.FC = () => {
             We acknowledge every complaint within 48 hours and resolve it within
             one month.
           </p>
+          <a
+            className="primary_btn"
+            href={whatsappLink("Hi! I have a question about your turmeric.")}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <WhatsAppOutlined /> Message us on WhatsApp
+          </a>
         </section>
         <section>
           <h2>Seller details</h2>

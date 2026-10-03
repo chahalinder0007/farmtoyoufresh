@@ -27,7 +27,6 @@ const ProductDetail: React.FC = () => {
   }, [setCurrentPageName]);
 
   const unitPrice = (product.price / product.grams).toFixed(2);
-  const orderMessage = `Hi! I'd like to order ${product.name}, ${product.size} (₹${product.price}).`;
 
   // Declarations the Legal Metrology rules expect on an online listing.
   const facts: Array<[string, string]> = [
@@ -87,15 +86,7 @@ const ProductDetail: React.FC = () => {
                 </p>
                 <p>{product.description}</p>
                 <div className="actions">
-                  <a
-                    className="primary_btn"
-                    href={whatsappLink(orderMessage)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <WhatsAppOutlined /> Order on WhatsApp
-                  </a>
-                  {business.amazonUrl && (
+                  {business.amazonUrl ? (
                     <a
                       className="primary_btn gold_btn"
                       href={business.amazonUrl}
@@ -104,8 +95,24 @@ const ProductDetail: React.FC = () => {
                     >
                       <ShoppingOutlined /> Buy on Amazon
                     </a>
+                  ) : (
+                    <span className="primary_btn comingSoon">
+                      <ShoppingOutlined /> Coming soon to Amazon
+                    </span>
                   )}
                 </div>
+                <p className="askLink">
+                  Questions about the turmeric or the lab report?{" "}
+                  <a
+                    href={whatsappLink(
+                      `Hi! I have a question about your ${product.name}.`
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <WhatsAppOutlined /> Message us on WhatsApp
+                  </a>
+                </p>
                 <dl className="facts">
                   {facts.map(([label, value]) => (
                     <React.Fragment key={label}>

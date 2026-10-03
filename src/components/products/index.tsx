@@ -17,9 +17,10 @@ const Products: React.FC = () => {
         <span className="eyebrow">Shop</span>
         <h1>Turmeric (Haldi) Powder</h1>
         <p>
-          One product for now: turmeric from our family's fields in Punjab, in
-          two pack sizes. Order on WhatsApp
-          {business.amazonUrl ? " or on Amazon" : ""}.
+          One product for now: turmeric from our family's fields in Punjab.{" "}
+          {business.amazonUrl
+            ? "Buy it on Amazon.in."
+            : "Coming soon to Amazon.in."}
         </p>
       </div>
       <div className="productList products">

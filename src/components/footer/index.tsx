@@ -56,7 +56,7 @@ const Footer = () => {
           {business.fssaiLicence && <> · FSSAI Lic. No. {business.fssaiLicence}</>}
           {business.gstin && <> · GSTIN {business.gstin}</>}
           {" · "}
-          <a href="#/policies">Orders, returns &amp; grievances</a>
+          <a href="#/policies">Buying, returns &amp; questions</a>
         </p>
         <p className="disclaimer">{brandDisclaimer}</p>
       </div>

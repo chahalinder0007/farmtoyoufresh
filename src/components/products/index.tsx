@@ -3,6 +3,7 @@ import "./style.scss";
 import ProductList from "../productList";
 import { useAppContext } from "../../context";
 import { business } from "../../business";
+import { productList } from "./content";
 
 const Products: React.FC = () => {
   const { setCurrentPageName } = useAppContext();
@@ -24,7 +25,9 @@ const Products: React.FC = () => {
         </p>
       </div>
       <div className="productList products">
-        <ProductList pageHeading="Choose a Pack" />
+        <ProductList
+          pageHeading={productList.length > 1 ? "Choose a Pack" : "The Pack"}
+        />
       </div>
     </div>
   );

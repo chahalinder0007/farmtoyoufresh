@@ -26,15 +26,4 @@ export const productList: Product[] = [
     buttonLink: "#/productDetail?productId=turmeric-400",
     description,
   },
-  {
-    key: "turmeric-100",
-    productImg: "./images/turmeric-powder.png",
-    name: "Turmeric (Haldi) Powder",
-    size: "100 g sampler",
-    grams: 100,
-    price: 89,
-    buttonText: "See details",
-    buttonLink: "#/productDetail?productId=turmeric-100",
-    description,
-  },
 ];

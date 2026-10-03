@@ -68,18 +68,24 @@ const ProductDetail: React.FC = () => {
               <div className="productInfo">
                 <span className="eyebrow">Batch {labResult.batch}</span>
                 <h1>{product.name}</h1>
-                <div className="sizes" role="group" aria-label="Pack size">
-                  {productList.map((p) => (
-                    <a
-                      key={p.key}
-                      href={p.buttonLink}
-                      className={p.key === product.key ? "size selected" : "size"}
-                      aria-current={p.key === product.key ? "true" : undefined}
-                    >
-                      {p.size}
-                    </a>
-                  ))}
-                </div>
+                {productList.length > 1 && (
+                  <div className="sizes" role="group" aria-label="Pack size">
+                    {productList.map((p) => (
+                      <a
+                        key={p.key}
+                        href={p.buttonLink}
+                        className={
+                          p.key === product.key ? "size selected" : "size"
+                        }
+                        aria-current={
+                          p.key === product.key ? "true" : undefined
+                        }
+                      >
+                        {p.size}
+                      </a>
+                    ))}
+                  </div>
+                )}
                 <h2>₹{product.price}</h2>
                 <p className="priceNote">
                   MRP, incl. of all taxes · ₹{unitPrice} per g
@@ -127,9 +133,11 @@ const ProductDetail: React.FC = () => {
           </Row>
         </div>
       </div>
-      <div className="productList">
-        <ProductList pageHeading="Other Sizes" excludeKey={product.key} />
-      </div>
+      {productList.length > 1 && (
+        <div className="productList">
+          <ProductList pageHeading="Other Sizes" excludeKey={product.key} />
+        </div>
+      )}
     </>
   );
 };

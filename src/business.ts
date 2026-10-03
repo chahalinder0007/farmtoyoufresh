@@ -8,8 +8,7 @@ export const business = {
   whatsappNumber: "919780780995",
   email: "sales@farmtoyoufresh.com",
   hours: "9:30 AM – 7:30 PM",
-  // 14-digit FSSAI licence number. Licence 12124999000360 shows validity
-  // only until 03-12-2025; put it here once its renewal is confirmed.
+  // 14-digit FSSAI licence number; add it once the licence is issued.
   fssaiLicence: "",
   // GSTIN; must be shown on the site from 1 January 2027.
   gstin: "",
